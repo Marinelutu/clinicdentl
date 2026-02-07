@@ -61,6 +61,7 @@ export function Home() {
                 title={t.services[service.titleKey as keyof typeof t.services] as string}
                 description={service.description}
                 features={service.features}
+                showIcon={false}
               />
             ))}
           </div>

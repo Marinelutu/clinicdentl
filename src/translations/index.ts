@@ -98,62 +98,74 @@ export const translations = {
         exam: {
           title: 'Examene Dentare de Rutină',
           description: 'Evaluări complete ale sănătății orale pentru a detecta problemele din timp.',
-          features: ['Examinare Vizuală', 'Radiografii Digitale', 'Screening Cancer Oral', 'Evaluare Sănătate Gingivală']
+          features: ['Examinare Vizuală', 'Radiografii Digitale', 'Screening Cancer Oral', 'Evaluare Sănătate Gingivală'],
+          price: 'de la €50'
         },
         cleaning: {
           title: 'Curățare Profesională',
           description: 'Curățare minuțioasă pentru a îndepărta placa, tartrul și petele.',
-          features: ['Eliminare Placă', 'Eliminare Tartru', 'Lustruire', 'Tratament Fluor']
+          features: ['Eliminare Placă', 'Eliminare Tartru', 'Lustruire', 'Tratament Fluor'],
+          price: '€80'
         },
         prevention: {
           title: 'Îngrijire Preventivă',
           description: 'Tratamente proactive pentru a preveni problemele dentare înainte de a începe.',
-          features: ['Sigilări', 'Tratamente Fluor', 'Gutiere Bruxism', 'Gutiere Sport']
+          features: ['Sigilări', 'Tratamente Fluor', 'Gutiere Bruxism', 'Gutiere Sport'],
+          price: 'de la €60'
         },
         whitening: {
           title: 'Albire Dentară',
           description: 'Tratamente profesionale de albire pentru un zâmbet vizibil mai strălucitor.',
-          features: ['Albire în Cabinet', 'Kituri pentru Acasă', 'Sigur & Eficient', 'Rezultate de Durată']
+          features: ['Albire în Cabinet', 'Kituri pentru Acasă', 'Sigur & Eficient', 'Rezultate de Durată'],
+          price: 'de la €250'
         },
         veneers: {
           title: 'Fațete Dentare',
           description: 'Fațete personalizate pentru a transforma aspectul dinților tăi.',
-          features: ['Aspect Natural', 'Rezistente la Pete', 'Durabile', 'Minim invazive']
+          features: ['Aspect Natural', 'Rezistente la Pete', 'Durabile', 'Minim invazive'],
+          price: '€600/dinte'
         },
         makeover: {
           title: 'Transformări Zâmbet',
           description: 'Tratamente complete care combină multiple proceduri pentru transformarea totală.',
-          features: ['Planificare Personalizată', 'Proceduri Multiple', 'Design Digital Zâmbet', 'Rezultate Uimitoare']
+          features: ['Planificare Personalizată', 'Proceduri Multiple', 'Design Digital Zâmbet', 'Rezultate Uimitoare'],
+          price: 'de la €3000'
         },
         implants: {
           title: 'Implanturi Dentare',
           description: 'Soluție permanentă pentru înlocuirea dinților lipsă cu aspect natural.',
-          features: ['Aspect Natural', 'Soluție Permanentă', 'Prezervare Os', 'Funcționalitate Îmbunătățită']
+          features: ['Aspect Natural', 'Soluție Permanentă', 'Prezervare Os', 'Funcționalitate Îmbunătățită'],
+          price: 'de la €1200'
         },
         crowns: {
           title: 'Coroane & Punți',
           description: 'Restaurarea dinților deteriorați sau lipsă cu lucrări personalizate.',
-          features: ['Aspect Natural', 'Puternic & Durabil', 'Potrivire Personalizată', 'Timp de Viață Lung']
+          features: ['Aspect Natural', 'Puternic & Durabil', 'Potrivire Personalizată', 'Timp de Viață Lung'],
+          price: '€400/dinte'
         },
         rootcanal: {
           title: 'Tratament de Canal',
           description: 'Salvarea dinților infectați sau deteriorați cu tratamente delicate.',
-          features: ['Ameliorare Durere', 'Prezervare Dinte', 'Tehnici Moderne', 'Tratament Confortabil']
+          features: ['Ameliorare Durere', 'Prezervare Dinte', 'Tehnici Moderne', 'Tratament Confortabil'],
+          price: 'de la €350'
         },
         emergency: {
           title: 'Asistență de Urgență',
           description: 'Tratament imediat pentru urgențe dentare și situații critice.',
-          features: ['Disponibilitate 24/7', 'Programări în Aceeași Zi', 'Ameliorare Rapidă Durere', 'Îngrijire Expertă']
+          features: ['Disponibilitate 24/7', 'Programări în Aceeași Zi', 'Ameliorare Rapidă Durere', 'Îngrijire Expertă'],
+          price: 'de la €100'
         },
         extraction: {
           title: 'Extracții Dentare',
           description: 'Extragerea sigură și confortabilă a dinților când este necesar.',
-          features: ['Tehnică Delicată', 'Opțiuni Sedare', 'Suport Post-Tratament', 'Recuperare Rapidă']
+          features: ['Tehnică Delicată', 'Opțiuni Sedare', 'Suport Post-Tratament', 'Recuperare Rapidă'],
+          price: 'de la €150'
         },
         trauma: {
           title: 'Îngrijire Traumatisme',
           description: 'Tratament specializat pentru leziuni și accidente dentare.',
-          features: ['Răspuns Imediat', 'Prezervare Dinte', 'Management Durere', 'Îngrijire Urmărire']
+          features: ['Răspuns Imediat', 'Prezervare Dinte', 'Management Durere', 'Îngrijire Urmărire'],
+          price: 'de la €200'
         },
       },
     },

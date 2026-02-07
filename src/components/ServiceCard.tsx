@@ -5,14 +5,18 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features?: string[];
+  price?: string;
+  showIcon?: boolean;
 }
 
-export function ServiceCard({ icon: Icon, title, description, features }: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description, features, price, showIcon = true }: ServiceCardProps) {
   return (
     <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 hover:border-secondary-light/50">
-      <div className="bg-gradient-to-br from-primary-light/5 to-secondary-light/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
-        <Icon className="w-8 h-8 text-secondary" />
-      </div>
+      {showIcon && (
+        <div className="bg-gradient-to-br from-primary-light/5 to-secondary-light/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+          <Icon className="w-8 h-8 text-secondary" />
+        </div>
+      )}
 
       <h3 className="text-xl font-serif font-bold text-primary mb-3">
         {title}
@@ -21,6 +25,14 @@ export function ServiceCard({ icon: Icon, title, description, features }: Servic
       <p className="text-neutral-600 leading-relaxed mb-4">
         {description}
       </p>
+
+      {price && (
+        <div className="mb-4">
+          <span className="inline-block bg-gradient-to-r from-secondary-light to-secondary text-white px-4 py-2 rounded-lg font-semibold text-lg shadow-sm">
+            {price}
+          </span>
+        </div>
+      )}
 
       {features && features.length > 0 && (
         <ul className="space-y-2">

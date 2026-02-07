@@ -10,6 +10,7 @@ import { Cosmetic } from './pages/Cosmetic';
 import { NewPatients } from './pages/NewPatients';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Specialists } from './pages/Specialists';
 import BookingModal from './components/BookingModal';
 
 function GlobalBookingModal() {
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/new-patients" element={<NewPatients />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/specialists" element={<Specialists />} />
               </Routes>
             </main>
             <Footer />
