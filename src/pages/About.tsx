@@ -59,33 +59,38 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             {doctors.map((doctor, index) => (
-              <div key={index} className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all">
-                <div className="flex items-start space-x-6">
-                  <div className="bg-white p-4 rounded-2xl shadow-sm">
-                    <doctor.icon className="w-16 h-16 text-secondary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-serif font-bold text-primary mb-1">
-                      {doctor.name}
-                    </h3>
-                    <div className="text-secondary font-semibold mb-1">{doctor.title}</div>
-                    <div className="text-sm text-neutral-600 mb-4">{doctor.specialization}</div>
+              <div key={index} className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+                {/* Doctor Image */}
+                <div className="relative h-80 bg-gradient-to-br from-primary-light/10 to-secondary-light/20">
+                  <img
+                    src={`/images/specialist-${index + 1}.png`}
+                    alt={doctor.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center space-x-2 text-sm">
-                        <Award className="w-4 h-4 text-secondary-dark" />
-                        <span className="text-neutral-700">{doctor.education}</span>
-                      </div>
-                      <div className="flex items-center space-x-2 text-sm">
-                        <Zap className="w-4 h-4 text-secondary-dark" />
-                        <span className="text-neutral-700">{doctor.experience}</span>
-                      </div>
+                {/* Doctor Info */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-serif font-bold text-primary mb-1">
+                    {doctor.name}
+                  </h3>
+                  <div className="text-secondary font-semibold mb-1">{doctor.title}</div>
+                  <div className="text-sm text-neutral-600 mb-4">{doctor.specialization}</div>
+
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Award className="w-4 h-4 text-secondary-dark" />
+                      <span className="text-neutral-700">{doctor.education}</span>
                     </div>
-
-                    <p className="text-neutral-600 leading-relaxed">
-                      {doctor.bio}
-                    </p>
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Zap className="w-4 h-4 text-secondary-dark" />
+                      <span className="text-neutral-700">{doctor.experience}</span>
+                    </div>
                   </div>
+
+                  <p className="text-neutral-600 leading-relaxed">
+                    {doctor.bio}
+                  </p>
                 </div>
               </div>
             ))}

@@ -109,6 +109,7 @@ export function Services() {
                 title={service.title}
                 description={service.description}
                 features={service.features}
+                price={service.price}
               />
             ))}
           </div>
@@ -130,6 +131,7 @@ export function Services() {
                 title={service.title}
                 description={service.description}
                 features={service.features}
+                price={service.price}
               />
             ))}
           </div>
@@ -151,6 +153,7 @@ export function Services() {
                 title={service.title}
                 description={service.description}
                 features={service.features}
+                price={service.price}
               />
             ))}
           </div>
@@ -172,6 +175,7 @@ export function Services() {
                 title={service.title}
                 description={service.description}
                 features={service.features}
+                price={service.price}
               />
             ))}
           </div>

@@ -39,16 +39,11 @@ export function Specialists() {
                             >
                                 {/* Specialist Image */}
                                 <div className="relative aspect-square bg-gradient-to-br from-primary-light/10 to-secondary-light/20 overflow-hidden">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center">
-                                            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-light to-secondary-light flex items-center justify-center text-white text-4xl font-bold mb-4">
-                                                {doctor.name.split(' ').map(n => n[0]).join('')}
-                                            </div>
-                                            <p className="text-sm text-neutral-500 px-4">
-                                                Photo placeholder - Add specialist image
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <img
+                                        src={`/images/specialist-${index + 1}.png`}
+                                        alt={doctor.name}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
 
                                 {/* Specialist Info */}
