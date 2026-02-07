@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface BookingModalProps {
     isOpen: boolean;
@@ -23,6 +24,7 @@ interface FormErrors {
 }
 
 const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState<FormData>({
         name: '',
         phone: '',
@@ -37,34 +39,25 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
-    const services = [
-        'Consultație Generală',
-        'Igienă Dentară',
-        'Albire Dentară',
-        'Implant Dentar',
-        'Coroane și Punți',
-        'Tratament de Canal',
-        'Ortodonție',
-        'Stomatologie Estetică',
-    ];
+    const services = t.booking?.services || [];
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = 'Numele este obligatoriu';
+            newErrors.name = t.booking?.errors?.name;
         }
 
         if (!formData.phone.trim()) {
-            newErrors.phone = 'Telefonul este obligatoriu';
+            newErrors.phone = t.booking?.errors?.phone;
         } else if (!/^[0-9+\s()-]{10,}$/.test(formData.phone)) {
-            newErrors.phone = 'Număr de telefon invalid';
+            newErrors.phone = t.booking?.errors?.phoneInvalid;
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = 'Email-ul este obligatoriu';
+            newErrors.email = t.booking?.errors?.email;
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Adresă de email invalidă';
+            newErrors.email = t.booking?.errors?.emailInvalid;
         }
 
         setErrors(newErrors);
@@ -129,8 +122,8 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 {/* Header */}
                 <div className="sticky top-0 bg-cream border-b border-gold/20 px-8 py-6 flex items-center justify-between">
                     <div>
-                        <h2 className="text-3xl font-serif text-primary">Programare Online</h2>
-                        <p className="text-neutral-500 mt-1">Completați formularul pentru a face o programare</p>
+                        <h2 className="text-3xl font-serif text-primary">{t.booking?.title}</h2>
+                        <p className="text-neutral-500 mt-1">{t.booking?.subtitle}</p>
                     </div>
                     <button
                         onClick={onClose}
@@ -145,7 +138,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 {submitSuccess && (
                     <div className="mx-8 mt-6 p-4 bg-sage/10 border border-sage/30 rounded-lg">
                         <p className="text-sage font-medium text-center">
-                            ✓ Programarea a fost trimisă cu succes! Vă vom contacta în curând.
+                            ✓ {t.booking?.success}
                         </p>
                     </div>
                 )}
@@ -155,7 +148,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     {/* Name */}
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                            Nume Complet <span className="text-accent">*</span>
+                            {t.booking?.name} <span className="text-accent">*</span>
                         </label>
                         <input
                             type="text"
@@ -165,7 +158,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                             onChange={handleChange}
                             className={`w-full px-4 py-3 bg-white border ${errors.name ? 'border-red-500' : 'border-gold/20'
                                 } rounded-lg focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all`}
-                            placeholder="Ion Popescu"
+                            placeholder={t.booking?.name}
                         />
                         {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                     </div>
@@ -174,7 +167,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                                Telefon <span className="text-accent">*</span>
+                                {t.booking?.phone} <span className="text-accent">*</span>
                             </label>
                             <input
                                 type="tel"
@@ -191,7 +184,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                                Email <span className="text-accent">*</span>
+                                {t.booking?.email} <span className="text-accent">*</span>
                             </label>
                             <input
                                 type="email"
@@ -211,7 +204,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label htmlFor="date" className="block text-sm font-medium text-charcoal mb-2">
-                                Data Preferată
+                                {t.booking?.date}
                             </label>
                             <input
                                 type="date"
@@ -225,7 +218,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                         <div>
                             <label htmlFor="time" className="block text-sm font-medium text-charcoal mb-2">
-                                Ora Preferată
+                                {t.booking?.time}
                             </label>
                             <input
                                 type="time"
@@ -241,7 +234,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     {/* Service */}
                     <div>
                         <label htmlFor="service" className="block text-sm font-medium text-charcoal mb-2">
-                            Tip Serviciu
+                            {t.booking?.service}
                         </label>
                         <select
                             id="service"
@@ -250,7 +243,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                             onChange={handleChange}
                             className="w-full px-4 py-3 bg-white border border-gold/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all"
                         >
-                            <option value="">Selectați un serviciu</option>
+                            <option value="">{t.booking?.servicePlaceholder}</option>
                             {services.map((service) => (
                                 <option key={service} value={service}>
                                     {service}
@@ -262,7 +255,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     {/* Message */}
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                            Mesaj Adițional (opțional)
+                            {t.booking?.message} <span className="text-neutral-400 font-normal">(opțional)</span>
                         </label>
                         <textarea
                             id="message"
@@ -271,7 +264,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                             onChange={handleChange}
                             rows={4}
                             className="w-full px-4 py-3 bg-white border border-gold/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all resize-none"
-                            placeholder="Detalii suplimentare despre programare..."
+                            placeholder={t.booking?.messagePlaceholder}
                         />
                     </div>
 
@@ -282,14 +275,14 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                             onClick={onClose}
                             className="flex-1 px-6 py-3 border border-gold/30 text-charcoal rounded-lg hover:bg-beige transition-all"
                         >
-                            Anulează
+                            {t.booking?.cancel}
                         </button>
                         <button
                             type="submit"
                             disabled={isSubmitting || submitSuccess}
                             className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-primary-light text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {isSubmitting ? 'Se trimite...' : submitSuccess ? 'Trimis ✓' : 'Trimite Programarea'}
+                            {isSubmitting ? t.booking?.sending : submitSuccess ? t.booking?.sent : t.booking?.submit}
                         </button>
                     </div>
                 </form>

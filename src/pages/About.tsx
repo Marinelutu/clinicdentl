@@ -5,78 +5,38 @@ import { useLanguage } from '../context/LanguageContext';
 export function About() {
   const { t } = useLanguage();
 
-  const doctors = [
-    {
-      icon: User,
-      name: 'Dr. Alexandru Ionescu',
-      title: 'Founder & Lead Dentist',
-      specialization: 'Cosmetic & Restorative Dentistry',
-      education: 'DMD, Carol Davila University of Medicine',
-      experience: '20+ years of experience',
-      bio: 'Passionate about creating beautiful, healthy smiles using the latest techniques and technology.',
-    },
-    {
-      icon: User,
-      name: 'Dr. Elena Popescu',
-      title: 'Orthodontist',
-      specialization: 'Orthodontics & Smile Design',
-      education: 'DDS, University of Medicine Cluj-Napoca',
-      experience: '15+ years of experience',
-      bio: 'Specializes in creating perfectly aligned smiles for patients of all ages.',
-    },
-    {
-      icon: User,
-      name: 'Dr. Mihai Georgescu',
-      title: 'Oral Surgeon',
-      specialization: 'Oral Surgery & Implantology',
-      education: 'DMD, PhD, Carol Davila University',
-      experience: '18+ years of experience',
-      bio: 'Expert in dental implants and complex oral surgical procedures.',
-    },
-    {
-      icon: User,
-      name: 'Dr. Maria Constantinescu',
-      title: 'Pediatric Dentist',
-      specialization: 'Children\'s Dentistry',
-      education: 'DDS, Grigore T. Popa University',
-      experience: '12+ years of experience',
-      bio: 'Making dental visits fun and stress-free for children and their families.',
-    },
-  ];
+  const doctors = t.about.doctors?.map((doc, index) => {
+    const icons = [User, User, User, User];
+    return {
+      icon: icons[index] || User,
+      ...doc
+    };
+  }) || [];
 
   const values = [
     {
       icon: Heart,
-      title: 'Patient-Centered Care',
-      description: 'Your comfort, health, and satisfaction are our top priorities in everything we do.',
+      ...t.about.values.care,
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality and continually invest in advanced education.',
+      ...t.about.values.excellence,
     },
     {
       icon: Users,
-      title: 'Integrity',
-      description: 'Honest communication and ethical treatment recommendations you can trust.',
+      ...t.about.values.integrity,
     },
     {
       icon: Zap,
-      title: 'Innovation',
-      description: 'Using the latest technology and techniques to provide superior dental care.',
+      ...t.about.values.innovation,
     },
   ];
 
-  const clinicPhotos = [
-    { icon: Building, label: 'Modern Clinic' },
-    { icon: Armchair, label: 'Treatment Rooms' },
-    { icon: Laptop, label: 'Digital Technology' },
-    { icon: Leaf, label: 'Relaxing Space' },
-    { icon: Coffee, label: 'Waiting Area' },
-    { icon: Sparkles, label: 'Sterilization' },
-    { icon: Palette, label: 'Interior Design' },
-    { icon: Star, label: 'Reception' },
-  ];
+  const clinicPhotoIcons = [Building, Armchair, Laptop, Leaf, Coffee, Sparkles, Palette, Star];
+  const clinicPhotos = clinicPhotoIcons.map((icon, index) => ({
+    icon,
+    label: t.about.clinicPhotos?.labels[index] || ''
+  }));
 
   return (
     <div>
@@ -139,13 +99,10 @@ export function About() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700 leading-relaxed">
               <p>
-                Founded in 2009, DentaVita has been at the forefront of modern dental care in Bucharest. What started as a vision to provide premium, patient-focused dental services has grown into a trusted practice serving thousands of satisfied patients.
+                {t.about.storyText}
               </p>
               <p>
-                Our clinic combines the latest dental technology with a warm, spa-like atmosphere that sets us apart from traditional dental offices. We believe that visiting the dentist should be a comfortable, even enjoyable experience.
-              </p>
-              <p>
-                Every member of our team shares a commitment to excellence, continuous learning, and treating each patient like family. From routine checkups to complex smile transformations, we approach every case with the same dedication and attention to detail.
+                {t.about.missionText}
               </p>
             </div>
           </div>
@@ -168,10 +125,10 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-serif font-bold text-primary mb-4">
-              Our Clinic
+              {t.about.clinicPhotos?.title}
             </h2>
             <p className="text-xl text-neutral-600">
-              A modern, comfortable space designed with your wellbeing in mind
+              {t.about.clinicPhotos?.subtitle}
             </p>
           </div>
 
@@ -184,15 +141,15 @@ export function About() {
           <div className="grid lg:grid-cols-3 gap-12 text-white text-center">
             <div>
               <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-neutral-100 text-lg">Years of Excellence</div>
+              <div className="text-neutral-100 text-lg">{t.about.stats?.years}</div>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">10,000+</div>
-              <div className="text-neutral-100 text-lg">Happy Patients</div>
+              <div className="text-neutral-100 text-lg">{t.about.stats?.patients}</div>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-neutral-100 text-lg">Awards & Certifications</div>
+              <div className="text-neutral-100 text-lg">{t.about.stats?.awards}</div>
             </div>
           </div>
         </div>

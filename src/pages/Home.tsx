@@ -12,49 +12,30 @@ export function Home() {
     {
       icon: Sparkles,
       titleKey: 'preventive',
-      description: 'Regular checkups, cleanings, and preventive care to keep your smile healthy and bright.',
-      features: ['Regular Checkups', 'Professional Cleaning', 'Fluoride Treatments', 'Oral Health Education'],
+      description: t.services.preventiveDesc,
+      features: t.home.serviceFeatures?.preventive || [],
     },
     {
       icon: Shield,
       titleKey: 'cosmetic',
-      description: 'Transform your smile with our advanced cosmetic dentistry treatments and procedures.',
-      features: ['Teeth Whitening', 'Veneers', 'Bonding', 'Smile Makeovers'],
+      description: t.services.cosmeticDesc,
+      features: t.home.serviceFeatures?.cosmetic || [],
     },
     {
       icon: Wrench,
       titleKey: 'restorative',
-      description: 'Restore function and aesthetics with our comprehensive restorative dental services.',
-      features: ['Dental Implants', 'Crowns & Bridges', 'Fillings', 'Root Canal Therapy'],
+      description: t.services.restorativeDesc,
+      features: t.home.serviceFeatures?.restorative || [],
     },
     {
       icon: AlertCircle,
       titleKey: 'emergency',
-      description: 'Immediate care for dental emergencies. We are here when you need us most.',
-      features: ['24/7 Emergency Line', 'Same-Day Appointments', 'Pain Management', 'Urgent Care'],
+      description: t.services.emergencyDesc,
+      features: t.home.serviceFeatures?.emergency || [],
     },
   ];
 
-  const testimonials = [
-    {
-      name: 'Maria Popescu',
-      treatment: 'Dental Implants',
-      text: 'I was nervous about getting implants, but the team made me feel so comfortable. The results exceeded my expectations! My confidence has completely transformed.',
-      rating: 5,
-    },
-    {
-      name: 'Alexandru Ionescu',
-      treatment: 'Teeth Whitening',
-      text: 'Professional, caring, and incredibly skilled. My teeth look amazing after the whitening treatment. I cannot stop smiling!',
-      rating: 5,
-    },
-    {
-      name: 'Elena Munteanu',
-      treatment: 'Smile Makeover',
-      text: 'After years of hiding my smile, I finally have the confidence to show it off. The entire experience was comfortable and stress-free.',
-      rating: 5,
-    },
-  ];
+  const testimonials = t.home.testimonials?.map(item => ({ ...item, rating: 5 })) || [];
 
   return (
     <div>
@@ -76,7 +57,7 @@ export function Home() {
               <ServiceCard
                 key={index}
                 icon={service.icon}
-                title={t.services[service.titleKey as keyof typeof t.services]}
+                title={t.services[service.titleKey as keyof typeof t.services] as string}
                 description={service.description}
                 features={service.features}
               />
@@ -115,13 +96,13 @@ export function Home() {
       <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Ready for Your Best Smile?
+            {t.home.ready?.title}
           </h2>
           <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
-            Schedule your consultation today and experience the difference of premium dental care.
+            {t.home.ready?.subtitle}
           </p>
           <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
-            {t.nav.bookOnline}
+            {t.home.ready?.button}
           </button>
         </div>
       </section>

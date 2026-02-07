@@ -31,7 +31,7 @@ export function Header() {
             </div>
             <div>
               <div className="text-xl font-serif font-bold text-primary">DentaVita</div>
-              <div className="text-xs text-neutral-500 -mt-0.5">Premium Dental Care</div>
+              <div className="text-xs text-neutral-500 -mt-0.5">{t.hero.badge}</div>
             </div>
           </Link>
 

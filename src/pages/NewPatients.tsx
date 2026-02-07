@@ -8,52 +8,26 @@ export function NewPatients() {
   const steps = [
     {
       icon: Calendar,
-      title: 'Schedule Your Visit',
-      description: 'Book your first appointment online or by phone. We offer flexible scheduling to fit your busy life.',
+      ...t.newPatients.steps.step1,
     },
     {
       icon: ClipboardList,
-      title: 'Complete Forms',
-      description: 'Fill out our simple patient forms online before your visit to save time at the clinic.',
+      ...t.newPatients.steps.step2,
     },
     {
       icon: Smile,
-      title: 'Meet Your Dentist',
-      description: 'Enjoy a warm welcome and comprehensive consultation with our experienced dental team.',
+      ...t.newPatients.steps.step3,
     },
     {
       icon: CheckCircle,
-      title: 'Begin Your Journey',
-      description: 'Start your personalized treatment plan and journey toward optimal oral health.',
+      ...t.newPatients.steps.step4,
     },
   ];
 
-  const faqs = [
-    {
-      question: 'What should I bring to my first appointment?',
-      answer: 'Please bring a valid ID, your insurance card if applicable, a list of current medications, and any relevant medical history. If you have previous dental X-rays, bringing them can help us better understand your dental history.',
-    },
-    {
-      question: 'How long will my first visit take?',
-      answer: 'Your initial visit typically takes 60-90 minutes. This includes time for paperwork, a comprehensive examination, X-rays if needed, consultation with the dentist, and discussing your treatment plan.',
-    },
-    {
-      question: 'Do you accept insurance?',
-      answer: 'We work with most major insurance providers and will help you maximize your benefits. Our team will verify your insurance coverage and explain your out-of-pocket costs before any treatment begins.',
-    },
-    {
-      question: 'What if I have dental anxiety?',
-      answer: 'We completely understand dental anxiety and have extensive experience helping nervous patients feel comfortable. We offer sedation options, explain every step of treatment, and work at your pace to ensure a stress-free experience.',
-    },
-    {
-      question: 'Do you offer payment plans?',
-      answer: 'Yes, we offer flexible payment plans to make dental care accessible. We accept various payment methods and can discuss financing options that work with your budget during your consultation.',
-    },
-    {
-      question: 'Can I see the same dentist for all appointments?',
-      answer: 'Absolutely! We believe continuity of care is important. You will be assigned a primary dentist who will oversee all your treatment, though our entire team collaborates to provide you with the best care possible.',
-    },
-  ];
+  const faqs = t.newPatients.faqs?.map(faq => ({
+    question: faq.q,
+    answer: faq.a,
+  })) || [];
 
   return (
     <div>
@@ -115,9 +89,9 @@ export function NewPatients() {
               <div className="mb-4">
                 <Hand className="w-12 h-12 text-secondary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Warm Welcome</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t.newPatients.expectations.welcome.title}</h3>
               <p className="text-neutral-600 leading-relaxed">
-                Our friendly staff will greet you and make you feel at home. We have created a comfortable, spa-like environment to help you relax.
+                {t.newPatients.expectations.welcome.description}
               </p>
             </div>
 
@@ -125,9 +99,9 @@ export function NewPatients() {
               <div className="mb-4">
                 <Scan className="w-12 h-12 text-secondary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Comprehensive Exam</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t.newPatients.expectations.exam.title}</h3>
               <p className="text-neutral-600 leading-relaxed">
-                Thorough examination using the latest technology, including digital X-rays and intraoral cameras to get a complete picture of your oral health.
+                {t.newPatients.expectations.exam.description}
               </p>
             </div>
 
@@ -135,9 +109,9 @@ export function NewPatients() {
               <div className="mb-4">
                 <FileText className="w-12 h-12 text-secondary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Treatment Plan</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t.newPatients.expectations.plan.title}</h3>
               <p className="text-neutral-600 leading-relaxed">
-                Personalized treatment recommendations with clear explanations, cost estimates, and timeline. You will never feel pressured or rushed into decisions.
+                {t.newPatients.expectations.plan.description}
               </p>
             </div>
           </div>
@@ -162,17 +136,17 @@ export function NewPatients() {
       <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Ready to Get Started?
+            {t.ctaSection.title}
           </h2>
           <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
-            Join our family of happy patients and experience the DentaVita difference.
+            {t.ctaSection.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
-              {t.nav.bookOnline}
+              {t.ctaSection.button}
             </button>
             <button className="bg-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary transition-all border-2 border-white/20">
-              Call Us: +40 21 123 4567
+              {t.contact.phone}: +40 21 123 4567
             </button>
           </div>
         </div>

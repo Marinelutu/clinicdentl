@@ -24,7 +24,7 @@ export function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-serif font-bold text-primary mb-8">
-                Get In Touch
+                {t.contact.getInTouch}
               </h2>
 
               <div className="space-y-6 mb-12">
@@ -47,7 +47,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-primary mb-1">{t.contact.phone}</h3>
                     <p className="text-neutral-600">+40 21 123 4567</p>
-                    <p className="text-sm text-secondary mt-1">Emergency: +40 21 123 4568</p>
+                    <p className="text-sm text-secondary mt-1">{t.contact.emergencyLabel}: +40 21 123 4568</p>
                   </div>
                 </div>
 
@@ -69,29 +69,29 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-primary mb-2">{t.contact.hours}</h3>
                     <div className="space-y-1 text-neutral-600">
-                      <p>Monday - Friday: 9:00 - 19:00</p>
-                      <p>Saturday: 9:00 - 15:00</p>
-                      <p>Sunday: Closed</p>
-                      <p className="text-sm text-secondary mt-2">Emergency services available 24/7</p>
+                      <p>{t.contact.schedule?.weekdays}</p>
+                      <p>{t.contact.schedule?.saturday}</p>
+                      <p>{t.contact.schedule?.sunday}</p>
+                      <p className="text-sm text-secondary mt-2">{t.contact.schedule?.emergency}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-br from-secondary to-primary rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Emergency Dental Care</h3>
+                <h3 className="text-2xl font-bold mb-4">{t.contact.emergencyBox?.title}</h3>
                 <p className="mb-6 text-neutral-50">
-                  If you have a dental emergency outside of our regular hours, please call our emergency line. We provide urgent care when you need it most.
+                  {t.contact.emergencyBox?.text}
                 </p>
                 <button className="bg-white text-secondary px-6 py-3 rounded-xl font-semibold hover:bg-neutral-50 transition-all">
-                  Call Emergency Line
+                  {t.contact.emergencyBox?.button}
                 </button>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl p-8 shadow-lg">
               <h2 className="text-3xl font-serif font-bold text-primary mb-6">
-                Send Us A Message
+                {t.contact.form.title}
               </h2>
 
               <form className="space-y-6">
@@ -147,7 +147,7 @@ export function Contact() {
                 </button>
 
                 <p className="text-sm text-neutral-500 text-center">
-                  This is a demo form. No data will be submitted.
+                  {t.contact.form.demo}
                 </p>
               </form>
             </div>
@@ -164,19 +164,19 @@ export function Contact() {
                   <MapPin className="w-12 h-12 text-secondary mx-auto" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-2">
-                  Find Us Here
+                  {t.contact.map?.title}
                 </h3>
                 <p className="text-neutral-600">
                   Str. Primăverii 45, București 011971
                 </p>
                 <button className="mt-6 bg-secondary text-white px-6 py-3 rounded-xl font-semibold hover:bg-secondary-dark transition-all">
-                  Open in Maps
+                  {t.contact.map?.button}
                 </button>
               </div>
             </div>
             <div className="p-6 bg-neutral-50 text-center">
               <p className="text-sm text-neutral-600">
-                Conveniently located in the heart of București with easy access to public transportation and parking.
+                {t.contact.map?.text}
               </p>
             </div>
           </div>

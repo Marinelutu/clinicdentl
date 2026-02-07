@@ -1,4 +1,4 @@
-import { BeforeAfter } from '../components/BeforeAfter';
+import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
 import { ServiceCard } from '../components/ServiceCard';
 import { Star, Sparkles, Shield, Heart, Palette, Gem, Eye, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -6,49 +6,24 @@ import { useLanguage } from '../context/LanguageContext';
 export function Cosmetic() {
   const { t } = useLanguage();
 
-  const transformations = [
-    {
-      title: 'Complete Smile Makeover',
-      description: 'Veneers, whitening, and contouring for a completely transformed smile.',
-    },
-    {
-      title: 'Teeth Whitening Transformation',
-      description: 'Professional whitening treatment for dramatically brighter teeth.',
-    },
-    {
-      title: 'Veneer Application',
-      description: 'Custom porcelain veneers for a natural, flawless appearance.',
-    },
-    {
-      title: 'Gap Closure',
-      description: 'Bonding and contouring to close gaps and create a uniform smile.',
-    },
-  ];
+
 
   const treatments = [
     {
       icon: Star,
-      title: 'Professional Whitening',
-      description: 'Advanced whitening technology for safe, effective, and long-lasting results.',
-      features: ['Zoom! Whitening', 'Custom Take-Home Kits', 'Up to 8 Shades Lighter', 'Sensitive Teeth Options'],
+      ...t.cosmetic.items.whitening,
     },
     {
       icon: Sparkles,
-      title: 'Porcelain Veneers',
-      description: 'Ultra-thin ceramic shells custom-designed to cover imperfections.',
-      features: ['Natural Appearance', 'Stain Resistant', '10-15 Year Lifespan', 'Minimal Tooth Reduction'],
+      ...t.cosmetic.items.veneers,
     },
     {
       icon: Shield,
-      title: 'Dental Bonding',
-      description: 'Quick and affordable solution for chips, gaps, and discoloration.',
-      features: ['Single Visit Treatment', 'Natural-Looking Results', 'Cost-Effective', 'Minimally Invasive'],
+      ...t.cosmetic.items.bonding,
     },
     {
       icon: Heart,
-      title: 'Smile Design',
-      description: 'Comprehensive planning using digital technology to preview your new smile.',
-      features: ['Digital Smile Preview', 'Customized Treatment Plan', 'Multiple Procedure Integration', 'Predictable Results'],
+      ...t.cosmetic.items.design,
     },
   ];
 
@@ -78,7 +53,18 @@ export function Cosmetic() {
             </p>
           </div>
 
-          <BeforeAfter images={transformations} />
+
+          <div className="max-w-4xl mx-auto">
+            <BeforeAfterSlider
+              beforeImage="/images/teeth-before.png"
+              afterImage="/images/teeth-after.png"
+              alt="Cosmetic dentistry transformation"
+            />
+            <p className="text-center text-neutral-500 mt-6 italic flex items-center justify-center gap-2">
+              <span className="animate-pulse">↔</span> Move the slider to reveal the transformation
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -89,7 +75,7 @@ export function Cosmetic() {
               {t.cosmetic.treatments}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              State-of-the-art cosmetic procedures to give you the smile of your dreams.
+              {t.cosmetic.intro}
             </p>
           </div>
 
@@ -111,17 +97,17 @@ export function Cosmetic() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-secondary to-primary rounded-3xl p-12 text-white text-center">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Your Dream Smile Awaits
+              {t.cosmetic.callToAction.title}
             </h2>
             <p className="text-xl text-neutral-50 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Every smile transformation begins with a consultation. Let us create a personalized treatment plan designed specifically for you.
+              {t.cosmetic.callToAction.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
-                Schedule Consultation
+                {t.cosmetic.callToAction.schedule}
               </button>
               <button className="bg-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary transition-all border-2 border-white/20">
-                View Pricing
+                {t.cosmetic.callToAction.pricing}
               </button>
             </div>
           </div>
@@ -131,7 +117,7 @@ export function Cosmetic() {
       <section className="py-20 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif font-bold text-primary mb-8 text-center">
-            What Makes Our Cosmetic Dentistry Different?
+            {t.cosmetic.features.title}
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -139,9 +125,9 @@ export function Cosmetic() {
               <div className="mb-4">
                 <Palette className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Artistic Approach</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">{t.cosmetic.features.artistic.title}</h3>
               <p className="text-neutral-600">
-                We blend dental science with aesthetic artistry to create naturally beautiful smiles that complement your facial features.
+                {t.cosmetic.features.artistic.description}
               </p>
             </div>
 
@@ -149,9 +135,9 @@ export function Cosmetic() {
               <div className="mb-4">
                 <Gem className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Premium Materials</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">{t.cosmetic.features.materials.title}</h3>
               <p className="text-neutral-600">
-                Only the highest quality dental materials and latest technology for results that look natural and last for years.
+                {t.cosmetic.features.materials.description}
               </p>
             </div>
 
@@ -159,9 +145,9 @@ export function Cosmetic() {
               <div className="mb-4">
                 <Eye className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Detail-Oriented</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">{t.cosmetic.features.detail.title}</h3>
               <p className="text-neutral-600">
-                Meticulous attention to every detail ensures your cosmetic work blends seamlessly with your natural teeth.
+                {t.cosmetic.features.detail.description}
               </p>
             </div>
 
@@ -169,9 +155,9 @@ export function Cosmetic() {
               <div className="mb-4">
                 <Clock className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Efficient Process</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">{t.cosmetic.features.efficient.title}</h3>
               <p className="text-neutral-600">
-                Advanced digital technology and streamlined procedures mean fewer appointments and faster results.
+                {t.cosmetic.features.efficient.description}
               </p>
             </div>
           </div>

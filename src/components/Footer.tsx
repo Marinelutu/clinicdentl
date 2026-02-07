@@ -25,7 +25,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="text-lg font-serif font-bold text-white">DentaVita</div>
-                <div className="text-xs text-neutral-400">Premium Dental Care</div>
+                <div className="text-xs text-neutral-400">{t.hero.badge}</div>
               </div>
             </div>
             <p className="text-sm text-neutral-400 leading-relaxed">
@@ -98,10 +98,10 @@ export function Footer() {
           </p>
           <div className="flex space-x-6 text-sm text-neutral-400">
             <a href="#" className="hover:text-secondary transition-colors">
-              Privacy Policy
+              {t.footer.privacy}
             </a>
             <a href="#" className="hover:text-secondary transition-colors">
-              Terms of Service
+              {t.footer.terms}
             </a>
           </div>
         </div>
