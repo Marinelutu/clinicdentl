@@ -100,13 +100,13 @@ export function Services() {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-teal-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
               {t.services.title}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
               {t.services.subtitle}
             </p>
           </div>
@@ -116,10 +116,10 @@ export function Services() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.services.preventive}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-neutral-600">
               Foundation of excellent oral health through regular care and prevention.
             </p>
           </div>
@@ -137,10 +137,10 @@ export function Services() {
           </div>
 
           <div className="mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.services.cosmetic}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-neutral-600">
               Transform your smile with our advanced aesthetic treatments.
             </p>
           </div>
@@ -158,10 +158,10 @@ export function Services() {
           </div>
 
           <div className="mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.services.restorative}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-neutral-600">
               Restore function and beauty to your smile with our comprehensive solutions.
             </p>
           </div>
@@ -179,10 +179,10 @@ export function Services() {
           </div>
 
           <div className="mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.services.emergency}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-neutral-600">
               Immediate care when you need it most. We are here for dental emergencies.
             </p>
           </div>
@@ -201,15 +201,15 @@ export function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
             Not Sure Which Service You Need?
           </h2>
-          <p className="text-xl text-teal-50 mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
             Schedule a consultation and our team will help you determine the best treatment plan for your needs.
           </p>
-          <button className="bg-white text-teal-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl">
+          <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
             {t.nav.bookOnline}
           </button>
         </div>

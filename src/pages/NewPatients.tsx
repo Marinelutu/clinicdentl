@@ -1,5 +1,5 @@
 import { FAQ } from '../components/FAQ';
-import { CheckCircle, Calendar, ClipboardList, Smile } from 'lucide-react';
+import { CheckCircle, Calendar, ClipboardList, Smile, Hand, Scan, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export function NewPatients() {
@@ -57,13 +57,13 @@ export function NewPatients() {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-teal-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
               {t.newPatients.title}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
               {t.newPatients.subtitle}
             </p>
           </div>
@@ -73,10 +73,10 @@ export function NewPatients() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.newPatients.process}
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-neutral-600">
               Simple steps to start your journey to a healthier smile
             </p>
           </div>
@@ -84,16 +84,16 @@ export function NewPatients() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gradient-to-br from-teal-500 to-blue-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="bg-gradient-to-br from-secondary to-primary-light w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <step.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="bg-teal-600 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                <div className="bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-primary mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-neutral-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -102,35 +102,41 @@ export function NewPatients() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-secondary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.newPatients.whatToExpect}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="text-5xl mb-4">👋</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Warm Welcome</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="mb-4">
+                <Hand className="w-12 h-12 text-secondary" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4">Warm Welcome</h3>
+              <p className="text-neutral-600 leading-relaxed">
                 Our friendly staff will greet you and make you feel at home. We have created a comfortable, spa-like environment to help you relax.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="text-5xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Comprehensive Exam</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="mb-4">
+                <Scan className="w-12 h-12 text-secondary" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4">Comprehensive Exam</h3>
+              <p className="text-neutral-600 leading-relaxed">
                 Thorough examination using the latest technology, including digital X-rays and intraoral cameras to get a complete picture of your oral health.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="text-5xl mb-4">📋</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Treatment Plan</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="mb-4">
+                <FileText className="w-12 h-12 text-secondary" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4">Treatment Plan</h3>
+              <p className="text-neutral-600 leading-relaxed">
                 Personalized treatment recommendations with clear explanations, cost estimates, and timeline. You will never feel pressured or rushed into decisions.
               </p>
             </div>
@@ -141,10 +147,10 @@ export function NewPatients() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-neutral-600">
               Everything you need to know before your first visit
             </p>
           </div>
@@ -153,19 +159,19 @@ export function NewPatients() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-teal-50 mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
             Join our family of happy patients and experience the DentaVita difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-teal-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl">
+            <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
               {t.nav.bookOnline}
             </button>
-            <button className="bg-teal-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-800 transition-all border-2 border-white/20">
+            <button className="bg-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary transition-all border-2 border-white/20">
               Call Us: +40 21 123 4567
             </button>
           </div>

@@ -28,12 +28,12 @@ export function TrustSignals() {
       {signals.map((signal, index) => (
         <div
           key={index}
-          className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          className="bg-white rounded-xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow group"
         >
-          <div className="bg-gradient-to-br from-teal-50 to-blue-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-            <signal.icon className="w-6 h-6 text-teal-600" />
+          <div className="bg-gradient-to-br from-primary-light/5 to-secondary-light/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <signal.icon className="w-6 h-6 text-secondary" />
           </div>
-          <p className="text-gray-700 font-medium leading-relaxed">
+          <p className="text-neutral-700 font-medium leading-relaxed">
             {signal.text}
           </p>
         </div>

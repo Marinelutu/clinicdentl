@@ -1,5 +1,5 @@
 import { PhotoGrid } from '../components/PhotoGrid';
-import { Award, Heart, Users, Zap } from 'lucide-react';
+import { Award, Heart, Users, Zap, User, Star, Building, Armchair, Laptop, Leaf, Coffee, Sparkles, Palette } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export function About() {
@@ -7,7 +7,7 @@ export function About() {
 
   const doctors = [
     {
-      emoji: '👨‍⚕️',
+      icon: User,
       name: 'Dr. Alexandru Ionescu',
       title: 'Founder & Lead Dentist',
       specialization: 'Cosmetic & Restorative Dentistry',
@@ -16,7 +16,7 @@ export function About() {
       bio: 'Passionate about creating beautiful, healthy smiles using the latest techniques and technology.',
     },
     {
-      emoji: '👩‍⚕️',
+      icon: User,
       name: 'Dr. Elena Popescu',
       title: 'Orthodontist',
       specialization: 'Orthodontics & Smile Design',
@@ -25,7 +25,7 @@ export function About() {
       bio: 'Specializes in creating perfectly aligned smiles for patients of all ages.',
     },
     {
-      emoji: '👨‍⚕️',
+      icon: User,
       name: 'Dr. Mihai Georgescu',
       title: 'Oral Surgeon',
       specialization: 'Oral Surgery & Implantology',
@@ -34,7 +34,7 @@ export function About() {
       bio: 'Expert in dental implants and complex oral surgical procedures.',
     },
     {
-      emoji: '👩‍⚕️',
+      icon: User,
       name: 'Dr. Maria Constantinescu',
       title: 'Pediatric Dentist',
       specialization: 'Children\'s Dentistry',
@@ -68,25 +68,25 @@ export function About() {
   ];
 
   const clinicPhotos = [
-    { emoji: '🏥', label: 'Modern Clinic' },
-    { emoji: '🪑', label: 'Treatment Rooms' },
-    { emoji: '💻', label: 'Digital Technology' },
-    { emoji: '🌿', label: 'Relaxing Space' },
-    { emoji: '☕', label: 'Waiting Area' },
-    { emoji: '🧼', label: 'Sterilization' },
-    { emoji: '🎨', label: 'Interior Design' },
-    { emoji: '🌟', label: 'Reception' },
+    { icon: Building, label: 'Modern Clinic' },
+    { icon: Armchair, label: 'Treatment Rooms' },
+    { icon: Laptop, label: 'Digital Technology' },
+    { icon: Leaf, label: 'Relaxing Space' },
+    { icon: Coffee, label: 'Waiting Area' },
+    { icon: Sparkles, label: 'Sterilization' },
+    { icon: Palette, label: 'Interior Design' },
+    { icon: Star, label: 'Reception' },
   ];
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-teal-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
               {t.about.title}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
               {t.about.subtitle}
             </p>
           </div>
@@ -97,28 +97,30 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             {doctors.map((doctor, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-teal-50 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all">
+              <div key={index} className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all">
                 <div className="flex items-start space-x-6">
-                  <div className="text-7xl">{doctor.emoji}</div>
+                  <div className="bg-white p-4 rounded-2xl shadow-sm">
+                    <doctor.icon className="w-16 h-16 text-secondary" />
+                  </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-1">
+                    <h3 className="text-2xl font-serif font-bold text-primary mb-1">
                       {doctor.name}
                     </h3>
-                    <div className="text-teal-600 font-semibold mb-1">{doctor.title}</div>
-                    <div className="text-sm text-gray-600 mb-4">{doctor.specialization}</div>
+                    <div className="text-secondary font-semibold mb-1">{doctor.title}</div>
+                    <div className="text-sm text-neutral-600 mb-4">{doctor.specialization}</div>
 
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center space-x-2 text-sm">
-                        <Award className="w-4 h-4 text-teal-600" />
-                        <span className="text-gray-700">{doctor.education}</span>
+                        <Award className="w-4 h-4 text-secondary-dark" />
+                        <span className="text-neutral-700">{doctor.education}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm">
-                        <Zap className="w-4 h-4 text-teal-600" />
-                        <span className="text-gray-700">{doctor.experience}</span>
+                        <Zap className="w-4 h-4 text-secondary-dark" />
+                        <span className="text-neutral-700">{doctor.experience}</span>
                       </div>
                     </div>
 
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-neutral-600 leading-relaxed">
                       {doctor.bio}
                     </p>
                   </div>
@@ -129,13 +131,13 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-secondary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               {t.about.story}
             </h2>
-            <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700 leading-relaxed">
               <p>
                 Founded in 2009, DentaVita has been at the forefront of modern dental care in Bucharest. What started as a vision to provide premium, patient-focused dental services has grown into a trusted practice serving thousands of satisfied patients.
               </p>
@@ -151,11 +153,11 @@ export function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="bg-gradient-to-br from-teal-50 to-blue-50 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
-                  <value.icon className="w-7 h-7 text-teal-600" />
+                <div className="bg-gradient-to-br from-secondary-light/20 to-primary-light/20 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                  <value.icon className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
+                <p className="text-neutral-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -165,10 +167,10 @@ export function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
               Our Clinic
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-neutral-600">
               A modern, comfortable space designed with your wellbeing in mind
             </p>
           </div>
@@ -177,20 +179,20 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-br from-secondary to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12 text-white text-center">
             <div>
               <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-teal-100 text-lg">Years of Excellence</div>
+              <div className="text-neutral-100 text-lg">Years of Excellence</div>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">10,000+</div>
-              <div className="text-teal-100 text-lg">Happy Patients</div>
+              <div className="text-neutral-100 text-lg">Happy Patients</div>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-teal-100 text-lg">Awards & Certifications</div>
+              <div className="text-neutral-100 text-lg">Awards & Certifications</div>
             </div>
           </div>
         </div>

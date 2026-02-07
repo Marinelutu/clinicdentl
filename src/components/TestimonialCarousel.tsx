@@ -25,32 +25,31 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden">
-        <Quote className="absolute top-8 right-8 w-16 h-16 text-teal-100" />
+      <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-neutral-100">
+        <Quote className="absolute top-8 right-8 w-16 h-16 text-primary/5" />
 
         <div className="relative">
           <div className="flex items-center space-x-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-5 h-5 ${
-                  i < testimonials[current].rating
-                    ? 'text-amber-400 fill-amber-400'
-                    : 'text-gray-300'
-                }`}
+                className={`w-5 h-5 ${i < testimonials[current].rating
+                    ? 'text-accent fill-accent'
+                    : 'text-neutral-200'
+                  }`}
               />
             ))}
           </div>
 
-          <p className="text-xl text-gray-700 leading-relaxed mb-6 italic">
+          <p className="text-xl text-neutral-700 leading-relaxed mb-6 italic font-serif">
             "{testimonials[current].text}"
           </p>
 
           <div>
-            <div className="font-semibold text-gray-900">
+            <div className="font-semibold text-primary">
               {testimonials[current].name}
             </div>
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-secondary">
               {testimonials[current].treatment}
             </div>
           </div>
@@ -60,9 +59,9 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
       <div className="flex justify-center items-center space-x-4 mt-6">
         <button
           onClick={prev}
-          className="bg-white p-3 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50 transition-all"
+          className="bg-white p-3 rounded-full shadow-md hover:shadow-lg hover:bg-neutral-50 transition-all text-neutral-600 hover:text-primary"
         >
-          <ChevronLeft className="w-5 h-5 text-gray-700" />
+          <ChevronLeft className="w-5 h-5" />
         </button>
 
         <div className="flex space-x-2">
@@ -70,18 +69,17 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === current ? 'bg-teal-600 w-8' : 'bg-gray-300'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all ${index === current ? 'bg-secondary w-8' : 'bg-neutral-300'
+                }`}
             />
           ))}
         </div>
 
         <button
           onClick={next}
-          className="bg-white p-3 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50 transition-all"
+          className="bg-white p-3 rounded-full shadow-md hover:shadow-lg hover:bg-neutral-50 transition-all text-neutral-600 hover:text-primary"
         >
-          <ChevronRight className="w-5 h-5 text-gray-700" />
+          <ChevronRight className="w-5 h-5" />
         </button>
       </div>
     </div>

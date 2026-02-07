@@ -63,10 +63,10 @@ export function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
               {t.home.servicesTitle}
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               {t.home.servicesSubtitle}
             </p>
           </div>
@@ -85,10 +85,10 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-secondary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
               {t.home.trustTitle}
             </h2>
           </div>
@@ -100,10 +100,10 @@ export function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
               {t.home.testimonialsTitle}
             </h2>
-            <p className="text-gray-500 italic">
+            <p className="text-neutral-500 italic">
               {t.home.testimonialsSubtitle}
             </p>
           </div>
@@ -112,15 +112,15 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
             Ready for Your Best Smile?
           </h2>
-          <p className="text-xl text-teal-50 mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
             Schedule your consultation today and experience the difference of premium dental care.
           </p>
-          <button className="bg-white text-teal-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl">
+          <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
             {t.nav.bookOnline}
           </button>
         </div>
