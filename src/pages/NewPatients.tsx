@@ -1,3 +1,4 @@
+import { CTASection } from '../components/CTASection';
 import { FAQ } from '../components/FAQ';
 import { CheckCircle, Calendar, ClipboardList, Smile, Hand, Scan, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -133,24 +134,12 @@ export function NewPatients() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            {t.ctaSection.title}
-          </h2>
-          <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
-            {t.ctaSection.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
-              {t.ctaSection.button}
-            </button>
-            <button className="bg-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary transition-all border-2 border-white/20">
-              {t.contact.phone}: +40 21 123 4567
-            </button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={t.ctaSection.title}
+        subtitle={t.ctaSection.subtitle}
+        buttonText={t.ctaSection.button}
+        secondaryButtonText={`${t.contact.phone}: +40 21 123 4567`}
+      />
     </div>
   );
 }

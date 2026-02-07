@@ -1,3 +1,4 @@
+import { CTASection } from '../components/CTASection';
 import { Hero } from '../components/Hero';
 import { ServiceCard } from '../components/ServiceCard';
 import { TestimonialCarousel } from '../components/TestimonialCarousel';
@@ -93,19 +94,11 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-secondary to-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            {t.home.ready?.title}
-          </h2>
-          <p className="text-xl text-neutral-50 mb-8 leading-relaxed">
-            {t.home.ready?.subtitle}
-          </p>
-          <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl">
-            {t.home.ready?.button}
-          </button>
-        </div>
-      </section>
+      <CTASection
+        title={t.home.ready?.title || ''}
+        subtitle={t.home.ready?.subtitle || ''}
+        buttonText={t.home.ready?.button || ''}
+      />
     </div>
   );
 }

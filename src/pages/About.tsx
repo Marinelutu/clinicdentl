@@ -1,9 +1,11 @@
 import { PhotoGrid } from '../components/PhotoGrid';
 import { Award, Heart, Users, Zap, User, Star, Building, Armchair, Laptop, Leaf, Coffee, Sparkles, Palette } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useBooking } from '../context/BookingContext';
 
 export function About() {
   const { t } = useLanguage();
+  const { openBooking } = useBooking();
 
   const doctors = t.about.doctors?.map((doc, index) => {
     const icons = [User, User, User, User];
@@ -138,7 +140,7 @@ export function About() {
 
       <section className="py-20 bg-gradient-to-br from-secondary to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12 text-white text-center">
+          <div className="grid lg:grid-cols-3 gap-12 text-white text-center mb-12">
             <div>
               <div className="text-5xl font-bold mb-2">15+</div>
               <div className="text-neutral-100 text-lg">{t.about.stats?.years}</div>
@@ -151,6 +153,15 @@ export function About() {
               <div className="text-5xl font-bold mb-2">50+</div>
               <div className="text-neutral-100 text-lg">{t.about.stats?.awards}</div>
             </div>
+          </div>
+
+          <div className="text-center">
+            <button
+              onClick={openBooking}
+              className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl"
+            >
+              {t.ctaSection.button}
+            </button>
           </div>
         </div>
       </section>

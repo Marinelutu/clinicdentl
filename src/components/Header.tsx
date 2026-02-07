@@ -2,11 +2,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Smile } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import BookingModal from './BookingModal';
+import { useBooking } from '../context/BookingContext';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const { openBooking } = useBooking();
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
@@ -67,7 +67,7 @@ export function Header() {
             </div>
 
             <button
-              onClick={() => setIsBookingOpen(true)}
+              onClick={openBooking}
               className="hidden lg:block bg-gradient-to-r from-sage to-sage/80 text-white px-6 py-2.5 rounded-lg font-medium hover:shadow-md hover-lift transition-all shadow-sm"
             >
               {t.nav.bookOnline}
@@ -100,7 +100,7 @@ export function Header() {
               </Link>
             ))}
             <button
-              onClick={() => { setIsBookingOpen(true); setIsMenuOpen(false); }}
+              onClick={() => { openBooking(); setIsMenuOpen(false); }}
               className="w-full mt-4 bg-gradient-to-r from-sage to-sage/80 text-white px-6 py-3 rounded-lg font-medium hover:shadow-md transition-all shadow-sm"
             >
               {t.nav.bookOnline}
@@ -108,8 +108,6 @@ export function Header() {
           </nav>
         </div>
       )}
-
-      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </header>
   );
 }
