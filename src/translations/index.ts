@@ -14,6 +14,14 @@ export const translations = {
       subtitle: 'Îngrijire dentară premium într-un ambient relaxant și prietenos. Echipa noastră de specialiști transformă îngrijirea dentară într-o experiență plăcută.',
       cta: 'Rezervă Consult',
       ctaSecondary: 'Afla Mai Mult',
+      badge: 'Îngrijire Dentară Premium',
+      stats: {
+        experience: 'Ani de Experiență',
+        patients: 'Pacienți Mulțumiți',
+        rating: 'Rating Mediu',
+        awards: 'Premii Câștigate',
+        satisfaction: 'Satisfacție',
+      },
     },
     home: {
       servicesTitle: 'Serviciile Noastre',
@@ -91,6 +99,14 @@ export const translations = {
       subtitle: 'Premium dental care in a relaxing and friendly environment. Our team of specialists transforms dental care into a pleasant experience.',
       cta: 'Book Consultation',
       ctaSecondary: 'Learn More',
+      badge: 'Premium Dental Care',
+      stats: {
+        experience: 'Years of Experience',
+        patients: 'Happy Patients',
+        rating: 'Average Rating',
+        awards: 'Awards Won',
+        satisfaction: 'Satisfaction',
+      },
     },
     home: {
       servicesTitle: 'Our Services',
@@ -168,6 +184,14 @@ export const translations = {
       subtitle: 'Cure dentali premium in un ambiente rilassante e accogliente. Il nostro team di specialisti trasforma le cure dentali in un\'esperienza piacevole.',
       cta: 'Prenota Consulto',
       ctaSecondary: 'Scopri di Più',
+      badge: 'Cure Dentali Premium',
+      stats: {
+        experience: 'Anni di Esperienza',
+        patients: 'Pazienti Soddisfatti',
+        rating: 'Valutazione Media',
+        awards: 'Premi Vinti',
+        satisfaction: 'Soddisfazione',
+      },
     },
     home: {
       servicesTitle: 'I Nostri Servizi',

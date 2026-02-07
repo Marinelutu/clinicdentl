@@ -17,7 +17,7 @@ export function Hero() {
             <div className="inline-block animate-fade-in-up">
               <span className="bg-sage/10 text-sage border border-sage/20 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 w-fit">
                 <Sparkles className="w-4 h-4" />
-                Premium Dental Care
+                {t.hero.badge}
               </span>
             </div>
 
@@ -61,7 +61,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-primary">15+</div>
-                  <div className="text-sm text-neutral-600">Ani de Experiență</div>
+                  <div className="text-sm text-neutral-600">{t.hero.stats.experience}</div>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export function Hero() {
               </div>
             </div>
             <div className="text-3xl font-bold text-primary mb-1">10,000+</div>
-            <div className="text-sm text-neutral-600">Happy Patients</div>
+            <div className="text-sm text-neutral-600">{t.hero.stats.patients}</div>
           </div>
 
           <div className="text-center group">
@@ -86,7 +86,7 @@ export function Hero() {
               </div>
             </div>
             <div className="text-3xl font-bold text-primary mb-1">4.9/5</div>
-            <div className="text-sm text-neutral-600">Average Rating</div>
+            <div className="text-sm text-neutral-600">{t.hero.stats.rating}</div>
           </div>
 
           <div className="text-center group">
@@ -96,7 +96,7 @@ export function Hero() {
               </div>
             </div>
             <div className="text-3xl font-bold text-primary mb-1">50+</div>
-            <div className="text-sm text-neutral-600">Awards Won</div>
+            <div className="text-sm text-neutral-600">{t.hero.stats.awards}</div>
           </div>
 
           <div className="text-center group">
@@ -106,7 +106,7 @@ export function Hero() {
               </div>
             </div>
             <div className="text-3xl font-bold text-primary mb-1">100%</div>
-            <div className="text-sm text-neutral-600">Satisfaction</div>
+            <div className="text-sm text-neutral-600">{t.hero.stats.satisfaction}</div>
           </div>
         </div>
       </div>
