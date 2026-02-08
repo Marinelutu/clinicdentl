@@ -53,7 +53,7 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -61,9 +61,42 @@ export function Home() {
                 title={t.services[service.titleKey as keyof typeof t.services] as string}
                 description={service.description}
                 features={service.features}
-                showIcon={false}
+                variant={index % 2 === 0 ? 'professional' : 'default'}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* New Dark Contrast Section for Premium Feel */}
+      <section className="section-contrast py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img
+                src="/images/clinic-reception.png"
+                alt="Luxury dental clinic reception and waiting area"
+                className="rounded-md shadow-2xl border-4 border-white/10 w-full h-[400px] object-cover"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+                {t.home.servicesTitle}
+              </h2>
+              <p className="text-lg text-neutral-300 leading-relaxed mb-6">
+                Echipamente de ultimă generație într-un spațiu conceput pentru confortul și siguranța ta. Fiecare detaliu al clinicii noastre reflectă angajamentul nostru față de excelență.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mt-8">
+                <div className="bg-white/5 p-4 rounded-md border border-white/10">
+                  <div className="text-3xl font-bold text-accent mb-1">15+</div>
+                  <div className="text-sm text-neutral-400">Ani Experiență</div>
+                </div>
+                <div className="bg-white/5 p-4 rounded-md border border-white/10">
+                  <div className="text-3xl font-bold text-accent mb-1">100%</div>
+                  <div className="text-sm text-neutral-400">Satisfacție Clienți</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

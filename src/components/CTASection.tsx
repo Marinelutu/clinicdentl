@@ -23,7 +23,7 @@ export function CTASection({
         return (
             <section className="py-20 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-gradient-to-br from-secondary to-primary rounded-3xl p-12 text-white text-center">
+                    <div className="bg-gradient-to-br from-secondary to-primary rounded-xl p-12 text-white text-center">
                         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
                             {title}
                         </h2>

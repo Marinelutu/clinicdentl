@@ -25,7 +25,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-neutral-100">
+      <div className="bg-white rounded-xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-neutral-100">
         <Quote className="absolute top-8 right-8 w-16 h-16 text-primary/5" />
 
         <div className="relative">
@@ -34,8 +34,8 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
               <Star
                 key={i}
                 className={`w-5 h-5 ${i < testimonials[current].rating
-                    ? 'text-accent fill-accent'
-                    : 'text-neutral-200'
+                  ? 'text-accent fill-accent'
+                  : 'text-neutral-200'
                   }`}
               />
             ))}

@@ -4,6 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Dark mode support for premium sections
+        dark: '#1A1A1A',
+        'dark-light': '#2C2C2C',
+        // Clinical professionalism
+        clinical: {
+          DEFAULT: '#2C5F7C',
+          light: '#4A8AB0',
+          dark: '#1E3F54',
+        },
         // Premium Primary Colors
         primary: {
           DEFAULT: '#0A1628', // Deep Midnight Blue
@@ -82,6 +91,9 @@ export default {
         'xl': '0 12px 32px 0 rgba(10, 22, 40, 0.15)',
         '2xl': '0 16px 48px 0 rgba(10, 22, 40, 0.18)',
         'inner': 'inset 0 2px 4px 0 rgba(10, 22, 40, 0.06)',
+        // Sharp shadows for squared professional elements
+        'sharp': '0 2px 4px 0 rgba(10, 22, 40, 0.15)',
+        'sharp-lg': '0 6px 12px 0 rgba(10, 22, 40, 0.20)',
       },
       borderWidth: {
         '1': '1px',

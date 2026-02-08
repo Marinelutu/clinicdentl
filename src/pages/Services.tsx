@@ -101,7 +101,7 @@ export function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
             {preventiveServices.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -110,9 +110,12 @@ export function Services() {
                 description={service.description}
                 features={service.features}
                 price={service.price}
+                variant="professional"
               />
             ))}
           </div>
+
+          <div className="sharp-divider" />
 
           <div className="mb-12">
             <h2 className="text-4xl font-serif font-bold text-primary mb-4">
@@ -123,7 +126,7 @@ export function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-2  lg:grid-cols-3 gap-6 mb-20">
             {cosmeticServices.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -132,9 +135,12 @@ export function Services() {
                 description={service.description}
                 features={service.features}
                 price={service.price}
+                variant="default"
               />
             ))}
           </div>
+
+          <div className="sharp-divider" />
 
           <div className="mb-12">
             <h2 className="text-4xl font-serif font-bold text-primary mb-4">
@@ -145,7 +151,7 @@ export function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
             {restorativeServices.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -154,9 +160,12 @@ export function Services() {
                 description={service.description}
                 features={service.features}
                 price={service.price}
+                variant={index === 1 ? "minimal" : "professional"}
               />
             ))}
           </div>
+
+          <div className="sharp-divider" />
 
           <div className="mb-12">
             <h2 className="text-4xl font-serif font-bold text-primary mb-4">
@@ -176,6 +185,7 @@ export function Services() {
                 description={service.description}
                 features={service.features}
                 price={service.price}
+                variant={index % 2 === 0 ? "default" : "minimal"}
               />
             ))}
           </div>

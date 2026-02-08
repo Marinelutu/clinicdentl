@@ -49,6 +49,49 @@
     transform: scale(1.02);
   }
 
+  /* Professional squared card - more grounded aesthetic */
+  .professional-card {
+    @apply bg-white border border-neutral-200 shadow-sharp;
+    transition: all 0.3s ease;
+  }
+
+  .professional-card:hover {
+    @apply shadow-sharp-lg border-primary/30;
+  }
+
+  /* Image overlay effects for sophisticated photography */
+  .image-overlay-dark {
+    @apply relative overflow-hidden;
+  }
+
+  .image-overlay-dark::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent;
+  }
+
+  .image-overlay-gradient {
+    @apply relative overflow-hidden;
+  }
+
+  .image-overlay-gradient::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent;
+  }
+
+  /* High contrast section for luxury premium feel */
+  .section-contrast {
+    @apply bg-dark text-neutral-50;
+  }
+
+  .section-contrast h1,
+  .section-contrast h2,
+  .section-contrast h3,
+  .section-contrast h4,
+  .section-contrast h5,
+  .section-contrast h6 {
+    @apply text-white;
+  }
+
   /* Elegant divider */
   .elegant-divider {
     @apply relative h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent my-12;
@@ -57,6 +100,11 @@
   .elegant-divider::before {
     content: '◆';
     @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gold text-xs bg-cream px-4;
+  }
+
+  /* Sharp divider for squared sections */
+  .sharp-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8;
   }
 }
 

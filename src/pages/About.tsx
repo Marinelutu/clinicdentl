@@ -1,5 +1,4 @@
-import { PhotoGrid } from '../components/PhotoGrid';
-import { Award, Heart, Users, Zap, User, Star, Building, Armchair, Laptop, Leaf, Coffee, Sparkles, Palette } from 'lucide-react';
+import { Award, Heart, Users, Zap, User } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useBooking } from '../context/BookingContext';
 
@@ -33,12 +32,6 @@ export function About() {
       ...t.about.values.innovation,
     },
   ];
-
-  const clinicPhotoIcons = [Building, Armchair, Laptop, Leaf, Coffee, Sparkles, Palette, Star];
-  const clinicPhotos = clinicPhotoIcons.map((icon, index) => ({
-    icon,
-    label: t.about.clinicPhotos?.labels[index] || ''
-  }));
 
   return (
     <div>
@@ -139,7 +132,53 @@ export function About() {
             </p>
           </div>
 
-          <PhotoGrid photos={clinicPhotos} />
+          {/* Professional Clinic Images Gallery */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Treatment Room */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+              <img
+                src="/images/clinic-treatment.png"
+                alt="Modern dental treatment room with advanced equipment"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold mb-1">Cameră de Tratament</h3>
+                  <p className="text-sm text-neutral-200">Echipamente moderne de ultimă generație</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Clinic Corridor */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+              <img
+                src="/images/clinic-corridor.png"
+                alt="Luxury dental clinic hallway"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold mb-1">Interior Profesional</h3>
+                  <p className="text-sm text-neutral-200">Design elegant și primitor</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Dental Equipment */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+              <img
+                src="/images/clinic-equipment.png"
+                alt="Advanced dental equipment and technology"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold mb-1">Echipamente Avansate</h3>
+                  <p className="text-sm text-neutral-200">Tehnologie dentară de vârf</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

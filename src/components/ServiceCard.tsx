@@ -7,14 +7,45 @@ interface ServiceCardProps {
   features?: string[];
   price?: string;
   showIcon?: boolean;
+  variant?: 'default' | 'professional' | 'minimal';
 }
 
-export function ServiceCard({ icon: Icon, title, description, features, price, showIcon = true }: ServiceCardProps) {
+export function ServiceCard({
+  icon: Icon,
+  title,
+  description,
+  features,
+  price,
+  showIcon = true,
+  variant = 'default'
+}: ServiceCardProps) {
+
+  // Different card styles for visual variety
+  const cardStyles = {
+    default: "group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 hover:border-secondary-light/50",
+    professional: "group professional-card p-8 rounded-md",
+    minimal: "group bg-white p-6 border-l-4 border-primary hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md"
+  };
+
+  // Different icon container styles per variant
+  const iconStyles = {
+    default: "bg-gradient-to-br from-primary-light/5 to-secondary-light/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm",
+    professional: "w-12 h-12 bg-clinical/10 rounded-md flex items-center justify-center mb-4 group-hover:bg-clinical/15 transition-colors",
+    minimal: "w-10 h-10 flex items-center justify-center mb-3"
+  };
+
+  // Icon color per variant
+  const iconColorClass = {
+    default: "w-8 h-8 text-secondary",
+    professional: "w-6 h-6 text-clinical",
+    minimal: "w-5 h-5 text-primary"
+  };
+
   return (
-    <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 hover:border-secondary-light/50">
+    <div className={cardStyles[variant]}>
       {showIcon && (
-        <div className="bg-gradient-to-br from-primary-light/5 to-secondary-light/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
-          <Icon className="w-8 h-8 text-secondary" />
+        <div className={iconStyles[variant]}>
+          <Icon className={iconColorClass[variant]} />
         </div>
       )}
 

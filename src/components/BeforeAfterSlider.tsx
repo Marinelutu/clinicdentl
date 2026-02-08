@@ -21,7 +21,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
     };
 
     return (
-        <div className={`relative w-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-100 ${className}`}>
+        <div className={`relative w-full rounded-lg overflow-hidden shadow-2xl bg-neutral-100 ${className}`}>
             {/* 16:9 Aspect Ratio Container */}
             <div className="relative w-full aspect-video">
                 {/* After Image (Background - Base Layer) */}
