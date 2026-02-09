@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToTop } from './components/ScrollToTop';
 import { LanguageProvider } from './context/LanguageContext';
 import { BookingProvider, useBooking } from './context/BookingContext';
+import { QuizProvider } from './context/QuizContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
@@ -13,6 +14,7 @@ import { Contact } from './pages/Contact';
 import { Specialists } from './pages/Specialists';
 import { ServicePage } from './pages/ServicePage';
 import BookingModal from './components/BookingModal';
+import QuizModal from './components/QuizModal';
 
 function GlobalBookingModal() {
   const { isBookingOpen, closeBooking } = useBooking();
@@ -23,26 +25,29 @@ function App() {
   return (
     <LanguageProvider>
       <BookingProvider>
-        <Router>
-          <ScrollToTop />
-          <div className="min-h-screen flex flex-col bg-ivory-50">
-            <Header />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:slug" element={<ServicePage />} />
-                <Route path="/cosmetic" element={<Cosmetic />} />
-                <Route path="/new-patients" element={<NewPatients />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/specialists" element={<Specialists />} />
-              </Routes>
-            </main>
-            <Footer />
-            <GlobalBookingModal />
-          </div>
-        </Router>
+        <QuizProvider>
+          <Router>
+            <ScrollToTop />
+            <div className="min-h-screen flex flex-col bg-ivory-50">
+              <Header />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/services/:slug" element={<ServicePage />} />
+                  <Route path="/cosmetic" element={<Cosmetic />} />
+                  <Route path="/new-patients" element={<NewPatients />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/specialists" element={<Specialists />} />
+                </Routes>
+              </main>
+              <Footer />
+              <GlobalBookingModal />
+              <QuizModal />
+            </div>
+          </Router>
+        </QuizProvider>
       </BookingProvider>
     </LanguageProvider>
   );

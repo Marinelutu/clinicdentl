@@ -5,11 +5,16 @@ import { TestimonialCarousel } from '../components/TestimonialCarousel';
 import { TrustSignals } from '../components/TrustSignals';
 import { StaffCertificates } from '../components/StaffCertificates';
 import { FAQ } from '../components/FAQ';
-import { Sparkles, Shield, Wrench, AlertCircle } from 'lucide-react';
+import { Sparkles, Shield, Wrench, AlertCircle, HelpCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useQuiz } from '../context/QuizContext';
 
 export function Home() {
   const { t } = useLanguage();
+  const { openQuiz } = useQuiz();
+
+  // Type-safe access for quiz CTA text
+  const quizCta = ((t as Record<string, unknown>).quiz as Record<string, unknown> | undefined)?.cta as string | undefined;
 
   const services = [
     {
@@ -72,6 +77,23 @@ export function Home() {
                 variant={index % 2 === 0 ? 'professional' : 'default'}
               />
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-gold-400/20 via-transparent to-sage-400/20">
+              <button
+                onClick={openQuiz}
+                className="group relative bg-primary text-white px-10 py-5 rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-3 overflow-hidden border border-white/10"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-gold-400/0 via-white/10 to-gold-400/0 -translate-x-full group-hover:animate-shimmer" />
+                <HelpCircle className="w-5 h-5 text-gold-300" />
+                <span>{quizCta || 'Nu ești sigur? Fă Quiz-ul'}</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+            <p className="mt-4 text-neutral-500 text-sm">
+              {t.home.quizHelper || 'Doar 2 minute pentru a găsi tratamentul perfect'}
+            </p>
           </div>
         </div>
       </section>

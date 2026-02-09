@@ -8,12 +8,19 @@ import {
   Star,
   Heart,
   Zap,
-  Circle
+  Circle,
+  HelpCircle,
+  ArrowRight
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useQuiz } from '../context/QuizContext';
 
 export function Services() {
   const { t } = useLanguage();
+  const { openQuiz } = useQuiz();
+
+  // Type-safe access for quiz CTA text
+  const quizCta = ((t as Record<string, unknown>).quiz as Record<string, unknown> | undefined)?.cta as string | undefined;
 
   const preventiveServices = [
     {
@@ -188,6 +195,24 @@ export function Services() {
                 variant={index % 2 === 0 ? "default" : "minimal"}
               />
             ))}
+          </div>
+
+          <div className="mt-20 text-center bg-ivory-50 rounded-3xl p-12 border border-primary/5 shadow-inner">
+            <HelpCircle className="w-12 h-12 text-gold-500 mx-auto mb-6 opacity-80" />
+            <h3 className="text-3xl font-serif font-bold text-primary mb-4">
+              {t.services.notSureTitle || 'Nu știi ce serviciu ți se potrivește?'}
+            </h3>
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto mb-10">
+              {t.services.notSureSubtitle || 'Lasă-ne să te ghidăm! Identificăm nevoile tale și recomandăm cel mai bun tratament prin câteva întrebări simple.'}
+            </p>
+            <button
+              onClick={openQuiz}
+              className="group bg-primary text-white px-10 py-5 rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-3 mx-auto"
+            >
+              <Sparkles className="w-5 h-5 text-gold-300" />
+              <span>{quizCta || 'Începe Quiz-ul Acum'}</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
       </section>

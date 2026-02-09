@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Award, Users, Star, Calendar } from 'lucide-react';
+import { ArrowRight, Sparkles, Award, Users, Star, HelpCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useBooking } from '../context/BookingContext';
+import { useQuiz } from '../context/QuizContext';
 
 export function Hero() {
   const { t } = useLanguage();
   const { openBooking } = useBooking();
+  const { openQuiz } = useQuiz();
+
+  // Type-safe access for quiz CTA text
+  const quizCta = ((t as Record<string, unknown>).quiz as Record<string, unknown> | undefined)?.cta as string | undefined;
 
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
@@ -65,11 +70,11 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <button
-              onClick={openBooking}
+              onClick={openQuiz}
               className="group bg-white text-primary px-8 py-4 rounded-md font-semibold hover:shadow-2xl hover:scale-105 transition-all shadow-lg flex items-center justify-center space-x-2"
             >
-              <Calendar className="w-5 h-5" />
-              <span>{t.hero.cta}</span>
+              <HelpCircle className="w-5 h-5" />
+              <span>{quizCta || 'Take the Quiz'}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button

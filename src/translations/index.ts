@@ -14,6 +14,7 @@ export const translations = {
       subtitle: 'Îngrijire dentară premium într-un ambient relaxant și prietenos. Echipa noastră de specialiști transformă îngrijirea dentară într-o experiență plăcută.',
       cta: 'Rezervă Consult',
       ctaSecondary: 'Afla Mai Mult',
+      quizHelper: 'Doar 2 minute pentru a găsi tratamentul perfect',
       badge: 'Îngrijire Dentară Premium',
       stats: {
         experience: 'Ani de Experiență',
@@ -44,8 +45,10 @@ export const translations = {
       ready: {
         title: 'Pregătit pentru cel mai bun zâmbet?',
         subtitle: 'Programează o consultație astăzi și experimentează diferența îngrijirii dentare premium.',
-        button: 'Programare Online'
+        button: 'Programare Online',
+        quizHelper: 'Doar 2 minute pentru a găsi tratamentul perfect'
       },
+      quizHelper: 'Doar 2 minute pentru a găsi tratamentul perfect',
       serviceFeatures: {
         preventive: ['Controale Regulare', 'Curățare Profesională', 'Tratamente Fluor', 'Educație Sănătate Orală'],
         cosmetic: ['Albire Dentară', 'Fațete', 'Lipire Dentară', 'Transformări Zâmbet'],
@@ -97,6 +100,8 @@ export const translations = {
       restorativeDesc: 'Restabilește funcționalitatea și frumusețea zâmbetului tău cu soluțiile noastre complete.',
       emergency: 'Urgențe Dentare',
       emergencyDesc: 'Îngrijire imediată când ai cea mai mare nevoie. Suntem aici pentru urgențe dentare.',
+      notSureTitle: 'Nu știi ce serviciu ți se potrivește?',
+      notSureSubtitle: 'Lasă-ne să te ghidăm! Identificăm nevoile tale și recomandăm cel mai bun tratament prin câteva întrebări simple.',
       items: {
         exam: {
           title: 'Examene Dentare de Rutină',
@@ -550,6 +555,82 @@ export const translations = {
         description: 'Recunoaștere pentru calitatea serviciilor și inovație în tratamentele stomatologice oferite pacienților noștri.'
       }
     },
+    quiz: {
+      cta: 'Fă Quiz-ul',
+      progressLabel: 'Întrebarea',
+      q1: {
+        badge: 'Să Începem',
+        prompt: 'Ce te aduce la clinica noastră astăzi?',
+        options: {
+          pain: 'Durere sau disconfort',
+          aesthetics: 'Vreau un zâmbet mai frumos',
+          checkup: 'Control de rutină',
+          emergency: 'Am o urgență dentară',
+        },
+      },
+      q2: {
+        badge: 'Confortul Tău',
+        prompt: 'Cum te simți în legătură cu vizitele la dentist?',
+        options: {
+          comfortable: 'Confortabil și relaxat',
+          nervous: 'Puțin nervos/nervoasă',
+          anxious: 'Foarte anxios/anxioasă',
+          firstTime: 'Este prima mea vizită',
+        },
+      },
+      q3: {
+        badge: 'Prioritățile Tale',
+        prompt: 'Ce este cel mai important pentru tine?',
+        options: {
+          appearance: 'Aspectul natural',
+          durability: 'Durabilitate pe termen lung',
+          quickTreatment: 'Tratament rapid',
+          affordability: 'Accesibilitate financiară',
+        },
+      },
+      q4: {
+        badge: 'Experiența Ta',
+        prompt: 'Ai mai avut tratamente dentare anterior?',
+        options: {
+          regular: 'Da, merg regulat la dentist',
+          some: 'Am avut câteva tratamente',
+          onlyCheckups: 'Doar controale de rutină',
+          never: 'Nu am mai fost la dentist',
+        },
+      },
+      q5: {
+        badge: 'Rezultatul Dorit',
+        prompt: 'Ce rezultat îți dorești cel mai mult?',
+        options: {
+          painFree: 'Un zâmbet fără durere',
+          whiterTeeth: 'Dinți mai albi',
+          replaceMissing: 'Înlocuirea dinților lipsă',
+          overallHealth: 'Sănătate orală generală',
+        },
+      },
+      result: {
+        title: 'Recomandarea Ta Personalizată!',
+        subtitle: 'Pe baza răspunsurilor tale, am identificat serviciul ideal pentru tine.',
+        recommended: 'Serviciul Recomandat',
+        learnMore: 'Află Mai Mult',
+        bookNow: 'Programează-te',
+        retake: 'Refă Quiz-ul',
+        services: {
+          exam: 'Examene Dentare de Rutină',
+          cleaning: 'Curățare Profesională',
+          prevention: 'Îngrijire Preventivă',
+          whitening: 'Albire Dentară',
+          veneers: 'Fațete Dentare',
+          makeover: 'Transformări Zâmbet',
+          implants: 'Implanturi Dentare',
+          crowns: 'Coroane & Punți',
+          rootcanal: 'Tratament de Canal',
+          emergency: 'Asistență de Urgență',
+          extraction: 'Extracții Dentare',
+          trauma: 'Îngrijire Traumatisme',
+        },
+      },
+    },
   },
   en: {
     nav: {
@@ -596,8 +677,10 @@ export const translations = {
       ready: {
         title: 'Ready for Your Best Smile?',
         subtitle: 'Schedule your consultation today and experience the difference of premium dental care.',
-        button: 'Book Online'
+        button: 'Book Online',
+        quizHelper: 'Only 2 minutes to find the perfect treatment'
       },
+      quizHelper: 'Only 2 minutes to find the perfect treatment',
       serviceFeatures: {
         preventive: ['Regular Checkups', 'Professional Cleaning', 'Fluoride Treatments', 'Oral Health Education'],
         cosmetic: ['Teeth Whitening', 'Veneers', 'Bonding', 'Smile Makeovers'],
@@ -649,6 +732,8 @@ export const translations = {
       restorativeDesc: 'Restore function and beauty to your smile with our comprehensive solutions.',
       emergency: 'Emergency Care',
       emergencyDesc: 'Immediate care when you need it most. We are here for dental emergencies.',
+      notSureTitle: 'Not sure which service you need?',
+      notSureSubtitle: 'Let us guide you! We will identify your needs and recommend the best treatment through a few simple questions.',
       items: {
         exam: {
           title: 'Routine Dental Exams',
@@ -1102,6 +1187,82 @@ export const translations = {
         description: 'Recognition for service quality and innovation in dental treatments provided to our patients.'
       }
     },
+    quiz: {
+      cta: 'Take the Quiz',
+      progressLabel: 'Question',
+      q1: {
+        badge: 'Let\'s Start',
+        prompt: 'What brings you to our clinic today?',
+        options: {
+          pain: 'Pain or discomfort',
+          aesthetics: 'I want a more beautiful smile',
+          checkup: 'Routine checkup',
+          emergency: 'I have a dental emergency',
+        },
+      },
+      q2: {
+        badge: 'Your Comfort',
+        prompt: 'How do you feel about dental visits?',
+        options: {
+          comfortable: 'Comfortable and relaxed',
+          nervous: 'A bit nervous',
+          anxious: 'Very anxious',
+          firstTime: 'It\'s my first time',
+        },
+      },
+      q3: {
+        badge: 'Your Priorities',
+        prompt: 'What is most important to you?',
+        options: {
+          appearance: 'Natural appearance',
+          durability: 'Long-term durability',
+          quickTreatment: 'Quick treatment',
+          affordability: 'Affordability',
+        },
+      },
+      q4: {
+        badge: 'Your Experience',
+        prompt: 'Have you had dental work before?',
+        options: {
+          regular: 'Yes, I go to the dentist regularly',
+          some: 'I\'ve had some treatments',
+          onlyCheckups: 'Only routine checkups',
+          never: 'I\'ve never been to the dentist',
+        },
+      },
+      q5: {
+        badge: 'Desired Result',
+        prompt: 'What result are you hoping for?',
+        options: {
+          painFree: 'A pain-free smile',
+          whiterTeeth: 'Whiter teeth',
+          replaceMissing: 'Replace missing teeth',
+          overallHealth: 'Overall oral health',
+        },
+      },
+      result: {
+        title: 'Your Personalized Recommendation!',
+        subtitle: 'Based on your answers, we\'ve identified the ideal service for you.',
+        recommended: 'Recommended Service',
+        learnMore: 'Learn More',
+        bookNow: 'Book Now',
+        retake: 'Retake Quiz',
+        services: {
+          exam: 'Routine Dental Exams',
+          cleaning: 'Professional Cleaning',
+          prevention: 'Preventive Care',
+          whitening: 'Teeth Whitening',
+          veneers: 'Porcelain Veneers',
+          makeover: 'Smile Makeovers',
+          implants: 'Dental Implants',
+          crowns: 'Crowns & Bridges',
+          rootcanal: 'Root Canal Therapy',
+          emergency: 'Emergency Dental Care',
+          extraction: 'Tooth Extraction',
+          trauma: 'Trauma Care',
+        },
+      },
+    },
   },
   it: {
     nav: {
@@ -1148,8 +1309,10 @@ export const translations = {
       ready: {
         title: 'Pronto per il Tuo Sorriso Migliore?',
         subtitle: 'Prenota oggi la tua consulenza e scopri la differenza delle cure dentali premium.',
-        button: 'Prenota Online'
+        button: 'Prenota Online',
+        quizHelper: 'Solo 2 minuti per trovare il trattamento perfetto'
       },
+      quizHelper: 'Solo 2 minuti per trovare il trattamento perfetto',
       serviceFeatures: {
         preventive: ['Controlli Regolari', 'Pulizia Professionale', 'Trattamenti al Fluoro', 'Educazione alla Salute Orale'],
         cosmetic: ['Sbiancamento Dentale', 'Faccette', 'Bonding', 'Trasformazione del Sorriso'],
@@ -1201,6 +1364,8 @@ export const translations = {
       restorativeDesc: 'Ripristina la funzionalità e la bellezza del tuo sorriso con le nostre soluzioni complete.',
       emergency: 'Emergenze Dentali',
       emergencyDesc: 'Cure immediate quando ne hai più bisogno. Siamo qui per le emergenze dentali.',
+      notSureTitle: 'Non sei sicuro di quale servizio hai bisogno?',
+      notSureSubtitle: 'Lasciati guidare da noi! Identificheremo le tue esigenze e ti consiglieremo il miglior trattamento attraverso poche semplici domande.',
       items: {
         exam: {
           title: 'Esami Dentali di Routine',
@@ -1653,6 +1818,82 @@ export const translations = {
         title: 'Premio Eccellenza 2024',
         description: 'Riconoscimento per la qualità dei servizi e l\'innovazione nei trattamenti odontoiatrici offerti ai nostri pazienti.'
       }
+    },
+    quiz: {
+      cta: 'Fai il Quiz',
+      progressLabel: 'Domanda',
+      q1: {
+        badge: 'Iniziamo',
+        prompt: 'Cosa ti porta nella nostra clinica oggi?',
+        options: {
+          pain: 'Dolore o disagio',
+          aesthetics: 'Voglio un sorriso più bello',
+          checkup: 'Controllo di routine',
+          emergency: 'Ho un\'emergenza dentale',
+        },
+      },
+      q2: {
+        badge: 'Il Tuo Comfort',
+        prompt: 'Come ti senti riguardo alle visite dal dentista?',
+        options: {
+          comfortable: 'A mio agio e rilassato',
+          nervous: 'Un po\' nervoso/a',
+          anxious: 'Molto ansioso/a',
+          firstTime: 'È la mia prima volta',
+        },
+      },
+      q3: {
+        badge: 'Le Tue Priorità',
+        prompt: 'Cosa è più importante per te?',
+        options: {
+          appearance: 'Aspetto naturale',
+          durability: 'Durata a lungo termine',
+          quickTreatment: 'Trattamento rapido',
+          affordability: 'Accessibilità economica',
+        },
+      },
+      q4: {
+        badge: 'La Tua Esperienza',
+        prompt: 'Hai già avuto trattamenti dentali?',
+        options: {
+          regular: 'Sì, vado dal dentista regolarmente',
+          some: 'Ho avuto alcuni trattamenti',
+          onlyCheckups: 'Solo controlli di routine',
+          never: 'Non sono mai stato dal dentista',
+        },
+      },
+      q5: {
+        badge: 'Risultato Desiderato',
+        prompt: 'Quale risultato desideri di più?',
+        options: {
+          painFree: 'Un sorriso senza dolore',
+          whiterTeeth: 'Denti più bianchi',
+          replaceMissing: 'Sostituire i denti mancanti',
+          overallHealth: 'Salute orale generale',
+        },
+      },
+      result: {
+        title: 'La Tua Raccomandazione Personalizzata!',
+        subtitle: 'In base alle tue risposte, abbiamo identificato il servizio ideale per te.',
+        recommended: 'Servizio Consigliato',
+        learnMore: 'Scopri di Più',
+        bookNow: 'Prenota Ora',
+        retake: 'Rifai il Quiz',
+        services: {
+          exam: 'Esami Dentali di Routine',
+          cleaning: 'Pulizia Professionale',
+          prevention: 'Cure Preventive',
+          whitening: 'Sbiancamento Dentale',
+          veneers: 'Faccette in Porcellana',
+          makeover: 'Trasformazione del Sorriso',
+          implants: 'Impianti Dentali',
+          crowns: 'Corone e Ponti',
+          rootcanal: 'Terapia Canalare',
+          emergency: 'Cure Dentali d\'Emergenza',
+          extraction: 'Estrazione Dentale',
+          trauma: 'Cura dei Traumi',
+        },
+      },
     },
   },
 };
