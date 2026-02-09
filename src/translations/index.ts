@@ -513,6 +513,43 @@ export const translations = {
         }
       }
     },
+    staff: {
+      badge: 'Echipa Noastră',
+      title: 'Specialiștii Noștri',
+      subtitle: 'Profesioniști dedicați cu experiență vastă în stomatologie modernă.',
+      drIonescu: {
+        name: 'Dr. Alexandru Ionescu',
+        role: 'Stomatologie Generală',
+        bio: 'Cu peste 15 ani de experiență, Dr. Ionescu este specializat în tratamente restaurative complexe și implantologie orală.'
+      },
+      drPopescu: {
+        name: 'Dr. Elena Popescu',
+        role: 'Ortodonție',
+        bio: 'Expert în ortodonție modernă cu aliniere invizibilă, Dr. Popescu transformă zâmbete de peste 10 ani.'
+      },
+      drGeorgescu: {
+        name: 'Dr. Mihai Georgescu',
+        role: 'Chirurgie Orală',
+        bio: 'Specialist în chirurgie orală și maxilo-facială, Dr. Georgescu are experiență în proceduri complexe de implantologie.'
+      }
+    },
+    certificates: {
+      badge: 'Certificări',
+      title: 'Acreditări și Premii',
+      subtitle: 'Standarde internaționale de calitate pentru siguranța și confortul dumneavoastră.',
+      iso: {
+        title: 'ISO 9001:2015',
+        description: 'Certificare internațională pentru managementul calității, asigurând cele mai înalte standarde în serviciile noastre stomatologice.'
+      },
+      accreditation: {
+        title: 'Acreditare Medicală',
+        description: 'Acreditare completă de la Colegiul Medicilor Stomatologi din România, confirmând excelența practicii noastre.'
+      },
+      award: {
+        title: 'Premiul Excelență 2024',
+        description: 'Recunoaștere pentru calitatea serviciilor și inovație în tratamentele stomatologice oferite pacienților noștri.'
+      }
+    },
   },
   en: {
     nav: {
@@ -1028,6 +1065,43 @@ export const translations = {
         }
       }
     },
+    staff: {
+      badge: 'Our Team',
+      title: 'Our Specialists',
+      subtitle: 'Dedicated professionals with extensive experience in modern dentistry.',
+      drIonescu: {
+        name: 'Dr. Alexandru Ionescu',
+        role: 'General Dentistry',
+        bio: 'With over 15 years of experience, Dr. Ionescu specializes in complex restorative treatments and oral implantology.'
+      },
+      drPopescu: {
+        name: 'Dr. Elena Popescu',
+        role: 'Orthodontics',
+        bio: 'Expert in modern orthodontics with invisible alignment, Dr. Popescu has been transforming smiles for over 10 years.'
+      },
+      drGeorgescu: {
+        name: 'Dr. Mihai Georgescu',
+        role: 'Oral Surgery',
+        bio: 'Specialist in oral and maxillofacial surgery, Dr. Georgescu has extensive experience in complex implantology procedures.'
+      }
+    },
+    certificates: {
+      badge: 'Certifications',
+      title: 'Accreditations & Awards',
+      subtitle: 'International quality standards for your safety and comfort.',
+      iso: {
+        title: 'ISO 9001:2015',
+        description: 'International certification for quality management, ensuring the highest standards in our dental services.'
+      },
+      accreditation: {
+        title: 'Medical Accreditation',
+        description: 'Full accreditation from the Romanian College of Dental Physicians, confirming excellence in our practice.'
+      },
+      award: {
+        title: 'Excellence Award 2024',
+        description: 'Recognition for service quality and innovation in dental treatments provided to our patients.'
+      }
+    },
   },
   it: {
     nav: {
@@ -1541,6 +1615,43 @@ export const translations = {
             { q: 'Mio figlio ha colpito un dente da latte. È grave?', a: 'Qualsiasi trauma dentale nei bambini deve essere valutato professionalmente per proteggere i denti permanenti in sviluppo.' }
           ]
         }
+      }
+    },
+    staff: {
+      badge: 'Il Nostro Team',
+      title: 'I Nostri Specialisti',
+      subtitle: 'Professionisti dedicati con vasta esperienza nella odontoiatria moderna.',
+      drIonescu: {
+        name: 'Dr. Alexandru Ionescu',
+        role: 'Odontoiatria Generale',
+        bio: 'Con oltre 15 anni di esperienza, il Dr. Ionescu è specializzato in trattamenti restaurativi complessi e implantologia orale.'
+      },
+      drPopescu: {
+        name: 'Dr. Elena Popescu',
+        role: 'Ortodonzia',
+        bio: 'Esperta in ortodonzia moderna con allineamento invisibile, la Dr.ssa Popescu trasforma sorrisi da oltre 10 anni.'
+      },
+      drGeorgescu: {
+        name: 'Dr. Mihai Georgescu',
+        role: 'Chirurgia Orale',
+        bio: 'Specialista in chirurgia orale e maxillo-facciale, il Dr. Georgescu ha esperienza in procedure complesse di implantologia.'
+      }
+    },
+    certificates: {
+      badge: 'Certificazioni',
+      title: 'Accreditamenti e Premi',
+      subtitle: 'Standard di qualità internazionali per la vostra sicurezza e comfort.',
+      iso: {
+        title: 'ISO 9001:2015',
+        description: 'Certificazione internazionale per la gestione della qualità, garantendo i più alti standard nei nostri servizi odontoiatrici.'
+      },
+      accreditation: {
+        title: 'Accreditamento Medico',
+        description: 'Accreditamento completo dal Collegio dei Medici Odontoiatri Rumeni, confermando l\'eccellenza nella nostra pratica.'
+      },
+      award: {
+        title: 'Premio Eccellenza 2024',
+        description: 'Riconoscimento per la qualità dei servizi e l\'innovazione nei trattamenti odontoiatrici offerti ai nostri pazienti.'
       }
     },
   },

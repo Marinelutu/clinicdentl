@@ -3,6 +3,8 @@ import { Hero } from '../components/Hero';
 import { ServiceCard } from '../components/ServiceCard';
 import { TestimonialCarousel } from '../components/TestimonialCarousel';
 import { TrustSignals } from '../components/TrustSignals';
+import { StaffCertificates } from '../components/StaffCertificates';
+import { FAQ } from '../components/FAQ';
 import { Sparkles, Shield, Wrench, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -37,6 +39,12 @@ export function Home() {
   ];
 
   const testimonials = t.home.testimonials?.map(item => ({ ...item, rating: 5 })) || [];
+
+  // Map newPatients FAQ data (q/a format) to FAQ component format (question/answer)
+  const homeFaqs = (t.newPatients?.faqs || []).map((faq: { q: string; a: string }) => ({
+    question: faq.q,
+    answer: faq.a,
+  }));
 
   return (
     <div>
@@ -110,6 +118,25 @@ export function Home() {
           </div>
 
           <TrustSignals />
+        </div>
+      </section>
+
+      {/* Staff & Certificates Section */}
+      <StaffCertificates />
+
+      {/* Homepage FAQ Section */}
+      <section className="py-20 bg-gradient-to-b from-cream to-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+              {t.serviceDetail?.faqTitle || 'Întrebări Frecvente'}
+            </h2>
+            <p className="text-neutral-600">
+              {t.newPatients?.subtitle || ''}
+            </p>
+          </div>
+
+          <FAQ items={homeFaqs} />
         </div>
       </section>
 
