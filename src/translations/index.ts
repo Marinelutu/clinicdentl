@@ -465,62 +465,74 @@ export const translations = {
         exam: {
           title: 'Routine Dental Exams',
           description: 'Comprehensive oral health evaluations to detect issues early.',
-          features: ['Visual Examination', 'Digital X-Rays', 'Oral Cancer Screening', 'Gum Health Assessment']
+          features: ['Visual Examination', 'Digital X-Rays', 'Oral Cancer Screening', 'Gum Health Assessment'],
+          price: 'from €50'
         },
         cleaning: {
           title: 'Professional Cleaning',
           description: 'Thorough teeth cleaning to remove plaque, tartar, and stains.',
-          features: ['Plaque Removal', 'Tartar Removal', 'Polishing', 'Fluoride Treatment']
+          features: ['Plaque Removal', 'Tartar Removal', 'Polishing', 'Fluoride Treatment'],
+          price: '€80'
         },
         prevention: {
           title: 'Preventive Care',
           description: 'Proactive treatments to prevent dental problems before they start.',
-          features: ['Sealants', 'Fluoride Treatments', 'Night Guards', 'Sports Guards']
+          features: ['Sealants', 'Fluoride Treatments', 'Night Guards', 'Sports Guards'],
+          price: 'from €60'
         },
         whitening: {
           title: 'Teeth Whitening',
           description: 'Professional whitening treatments for a dramatically brighter smile.',
-          features: ['In-Office Whitening', 'Take-Home Kits', 'Safe & Effective', 'Long-Lasting Results']
+          features: ['In-Office Whitening', 'Take-Home Kits', 'Safe & Effective', 'Long-Lasting Results'],
+          price: 'from €250'
         },
         veneers: {
           title: 'Porcelain Veneers',
           description: 'Custom-crafted veneers to transform the appearance of your teeth.',
-          features: ['Natural Appearance', 'Stain Resistant', 'Durable', 'Minimally Invasive']
+          features: ['Natural Appearance', 'Stain Resistant', 'Durable', 'Minimally Invasive'],
+          price: '€600/tooth'
         },
         makeover: {
           title: 'Smile Makeovers',
           description: 'Comprehensive treatments combining multiple procedures for total transformation.',
-          features: ['Personalized Planning', 'Multiple Procedures', 'Digital Smile Design', 'Stunning Results']
+          features: ['Personalized Planning', 'Multiple Procedures', 'Digital Smile Design', 'Stunning Results'],
+          price: 'from €3000'
         },
         implants: {
           title: 'Dental Implants',
           description: 'Permanent solution to replace missing teeth with natural-looking results.',
-          features: ['Natural Appearance', 'Permanent Solution', 'Bone Preservation', 'Improved Function']
+          features: ['Natural Appearance', 'Permanent Solution', 'Bone Preservation', 'Improved Function'],
+          price: 'from €1200'
         },
         crowns: {
           title: 'Crowns & Bridges',
           description: 'Restore damaged or missing teeth with custom-crafted restorations.',
-          features: ['Natural Look', 'Strong & Durable', 'Custom Fit', 'Long-Lasting']
+          features: ['Natural Look', 'Strong & Durable', 'Custom Fit', 'Long-Lasting'],
+          price: '€400/tooth'
         },
         rootcanal: {
           title: 'Root Canal Therapy',
           description: 'Save infected or damaged teeth with gentle, effective treatment.',
-          features: ['Pain Relief', 'Tooth Preservation', 'Modern Techniques', 'Comfortable Treatment']
+          features: ['Pain Relief', 'Tooth Preservation', 'Modern Techniques', 'Comfortable Treatment'],
+          price: 'from €350'
         },
         emergency: {
           title: 'Emergency Dental Care',
           description: 'Immediate treatment for dental emergencies and urgent situations.',
-          features: ['24/7 Availability', 'Same-Day Appointments', 'Fast Pain Relief', 'Expert Care']
+          features: ['24/7 Availability', 'Same-Day Appointments', 'Fast Pain Relief', 'Expert Care'],
+          price: 'from €100'
         },
         extraction: {
           title: 'Tooth Extraction',
           description: 'Safe and comfortable tooth removal when necessary.',
-          features: ['Gentle Technique', 'Sedation Options', 'Post-Care Support', 'Quick Recovery']
+          features: ['Gentle Technique', 'Sedation Options', 'Post-Care Support', 'Quick Recovery'],
+          price: 'from €150'
         },
         trauma: {
           title: 'Trauma Care',
           description: 'Specialized treatment for dental injuries and accidents.',
-          features: ['Immediate Response', 'Tooth Preservation', 'Pain Management', 'Follow-Up Care']
+          features: ['Immediate Response', 'Tooth Preservation', 'Pain Management', 'Follow-Up Care'],
+          price: 'from €200'
         },
       },
     },
@@ -817,62 +829,74 @@ export const translations = {
         exam: {
           title: 'Esami Dentali di Routine',
           description: 'Valutazioni complete della salute orale per rilevare i problemi precocemente.',
-          features: ['Esame Visivo', 'Raggi X Digitali', 'Screening Cancro Orale', 'Valutazione Salute Gengive']
+          features: ['Esame Visivo', 'Raggi X Digitali', 'Screening Cancro Orale', 'Valutazione Salute Gengive'],
+          price: 'da €50'
         },
         cleaning: {
           title: 'Pulizia Professionale',
           description: 'Pulizia approfondita per rimuovere placca, tartaro e macchie.',
-          features: ['Rimozione Placca', 'Rimozione Tartaro', 'Lucidatura', 'Trattamento Fluoro']
+          features: ['Rimozione Placca', 'Rimozione Tartaro', 'Lucidatura', 'Trattamento Fluoro'],
+          price: '€80'
         },
         prevention: {
           title: 'Cure Preventive',
           description: 'Trattamenti proattivi per prevenire problemi dentali prima che inizino.',
-          features: ['Sigillanti', 'Trattamenti Fluoro', 'Byte Notturni', 'Byte Sportivi']
+          features: ['Sigillanti', 'Trattamenti Fluoro', 'Byte Notturni', 'Byte Sportivi'],
+          price: 'da €60'
         },
         whitening: {
           title: 'Sbiancamento Dentale',
           description: 'Trattamenti professionali di sbiancamento per un sorriso visibilmente più luminoso.',
-          features: ['Sbiancamento in Studio', 'Kit Domiciliari', 'Sicuro ed Efficace', 'Risultati Duraturi']
+          features: ['Sbiancamento in Studio', 'Kit Domiciliari', 'Sicuro ed Efficace', 'Risultati Duraturi'],
+          price: 'da €250'
         },
         veneers: {
           title: 'Faccette in Porcellana',
           description: 'Faccette personalizzate per trasformare l\'aspetto dei tuoi denti.',
-          features: ['Aspetto Naturale', 'Resistenti alle Macchie', 'Durevoli', 'Minimamente Invasive']
+          features: ['Aspetto Naturale', 'Resistenti alle Macchie', 'Durevoli', 'Minimamente Invasive'],
+          price: '€600/dente'
         },
         makeover: {
           title: 'Trasformazione del Sorriso',
           description: 'Trattamenti completi che combinano procedure multiple per una trasformazione totale.',
-          features: ['Pianificazione Personalizzata', 'Procedure Multiple', 'Design Digitale Sorriso', 'Risultati Straordinari']
+          features: ['Pianificazione Personalizzata', 'Procedure Multiple', 'Design Digitale Sorriso', 'Risultati Straordinari'],
+          price: 'da €3000'
         },
         implants: {
           title: 'Impianti Dentali',
           description: 'Soluzione permanente per sostituire i denti mancanti con risultati naturali.',
-          features: ['Aspetto Naturale', 'Soluzione Permanente', 'Preservazione Osso', 'Funzionalità Migliorata']
+          features: ['Aspetto Naturale', 'Soluzione Permanente', 'Preservazione Osso', 'Funzionalità Migliorata'],
+          price: 'da €1200'
         },
         crowns: {
           title: 'Corone & Ponti',
           description: 'Ripristino di denti danneggiati o mancanti con restauri su misura.',
-          features: ['Aspetto Naturale', 'Forti e Durevoli', 'Su Misura', 'Lunga Durata']
+          features: ['Aspetto Naturale', 'Forti e Durevoli', 'Su Misura', 'Lunga Durata'],
+          price: '€400/dente'
         },
         rootcanal: {
           title: 'Trattamento Canalare',
           description: 'Salvataggio di denti infetti o danneggiati con trattamenti delicati ed efficaci.',
-          features: ['Sollievo Dal Dolore', 'Preservazione Dente', 'Tecniche Moderne', 'Trattamento Confortevole']
+          features: ['Sollievo Dal Dolore', 'Preservazione Dente', 'Tecniche Moderne', 'Trattamento Confortevole'],
+          price: 'da €350'
         },
         emergency: {
           title: 'Cure Dentali d\'Emergenza',
           description: 'Trattamento immediato per emergenze dentali e situazioni urgenti.',
-          features: ['Disponibilità 24/7', 'Appuntamenti in Giornata', 'Sollievo Rapido Dolore', 'Cure Esperte']
+          features: ['Disponibilità 24/7', 'Appuntamenti in Giornata', 'Sollievo Rapido Dolore', 'Cure Esperte'],
+          price: 'da €100'
         },
         extraction: {
           title: 'Estrazione Dentale',
           description: 'Rimozione sicura e confortevole del dente quando necessario.',
-          features: ['Tecnica Delicata', 'Opzioni Sedazione', 'Supporto Post-Cura', 'Recupero Rapido']
+          features: ['Tecnica Delicata', 'Opzioni Sedazione', 'Supporto Post-Cura', 'Recupero Rapido'],
+          price: 'da €150'
         },
         trauma: {
           title: 'Cura dei Traumi',
           description: 'Trattamento specializzato per lesioni dentali e incidenti.',
-          features: ['Risposta Immediata', 'Preservazione Dente', 'Gestione Dolore', 'Cure Successive']
+          features: ['Risposta Immediata', 'Preservazione Dente', 'Gestione Dolore', 'Cure Successive'],
+          price: 'da €200'
         },
       },
     },
