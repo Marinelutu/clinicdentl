@@ -84,16 +84,16 @@ export function Home() {
                 {t.home.servicesTitle}
               </h2>
               <p className="text-lg text-neutral-300 leading-relaxed mb-6">
-                Echipamente de ultimă generație într-un spațiu conceput pentru confortul și siguranța ta. Fiecare detaliu al clinicii noastre reflectă angajamentul nostru față de excelență.
+                {t.home.equipmentDescription}
               </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="bg-white/5 p-4 rounded-md border border-white/10">
                   <div className="text-3xl font-bold text-accent mb-1">15+</div>
-                  <div className="text-sm text-neutral-400">Ani Experiență</div>
+                  <div className="text-sm text-neutral-400">{t.home.yearsExperience}</div>
                 </div>
                 <div className="bg-white/5 p-4 rounded-md border border-white/10">
                   <div className="text-3xl font-bold text-accent mb-1">100%</div>
-                  <div className="text-sm text-neutral-400">Satisfacție Clienți</div>
+                  <div className="text-sm text-neutral-400">{t.home.clientSatisfaction}</div>
                 </div>
               </div>
             </div>

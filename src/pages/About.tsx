@@ -143,8 +143,8 @@ export function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                 <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">Cameră de Tratament</h3>
-                  <p className="text-sm text-neutral-200">Echipamente moderne de ultimă generație</p>
+                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.treatmentRoom?.title}</h3>
+                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.treatmentRoom?.description}</p>
                 </div>
               </div>
             </div>
@@ -158,8 +158,8 @@ export function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                 <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">Interior Profesional</h3>
-                  <p className="text-sm text-neutral-200">Design elegant și primitor</p>
+                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.interior?.title}</h3>
+                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.interior?.description}</p>
                 </div>
               </div>
             </div>
@@ -173,8 +173,8 @@ export function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                 <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">Echipamente Avansate</h3>
-                  <p className="text-sm text-neutral-200">Tehnologie dentară de vârf</p>
+                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.equipment?.title}</h3>
+                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.equipment?.description}</p>
                 </div>
               </div>
             </div>

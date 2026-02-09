@@ -31,6 +31,9 @@ export const translations = {
     home: {
       servicesTitle: 'Serviciile Noastre',
       servicesSubtitle: 'Îngrijire dentară completă pentru toată familia',
+      equipmentDescription: 'Echipamente de ultimă generație într-un spațiu conceput pentru confortul și siguranța ta. Fiecare detaliu al clinicii noastre reflectă angajamentul nostru față de excelență.',
+      yearsExperience: 'Ani Experiență',
+      clientSatisfaction: 'Satisfacție Clienți',
       trustTitle: 'De Ce Ne Aleg Pacienții',
       trustItem1: 'Peste 15 ani de experiență',
       trustItem2: 'Tehnologie dentară de ultimă generație',
@@ -267,7 +270,19 @@ export const translations = {
       clinicPhotos: {
         title: 'Clinica Noastră',
         subtitle: 'Un spațiu modern, confortabil, creat pentru bunăstarea ta',
-        labels: ['Clinică Modernă', 'Săli Tratament', 'Tehnologie Digitală', 'Spațiu Relaxare', 'Zonă Așteptare', 'Sterilizare', 'Design Interior', 'Recepție']
+        labels: ['Clinică Modernă', 'Săli Tratament', 'Tehnologie Digitală', 'Spațiu Relaxare', 'Zonă Așteptare', 'Sterilizare', 'Design Interior', 'Recepție'],
+        treatmentRoom: {
+          title: 'Cameră de Tratament',
+          description: 'Echipamente moderne de ultimă generație'
+        },
+        interior: {
+          title: 'Interior Profesional',
+          description: 'Design elegant și primitor'
+        },
+        equipment: {
+          title: 'Echipamente Avansate',
+          description: 'Tehnologie dentară de vârf'
+        }
       },
       stats: {
         years: 'Ani de Excelență',
@@ -380,6 +395,9 @@ export const translations = {
     home: {
       servicesTitle: 'Our Services',
       servicesSubtitle: 'Complete dental care for the whole family',
+      equipmentDescription: 'State-of-the-art equipment in a space designed for your comfort and safety. Every detail of our clinic reflects our commitment to excellence.',
+      yearsExperience: 'Years Experience',
+      clientSatisfaction: 'Client Satisfaction',
       trustTitle: 'Why Patients Choose Us',
       trustItem1: 'Over 15 years of experience',
       trustItem2: 'State-of-the-art dental technology',
@@ -604,7 +622,19 @@ export const translations = {
       clinicPhotos: {
         title: 'Our Clinic',
         subtitle: 'A modern, comfortable space designed with your wellbeing in mind',
-        labels: ['Modern Clinic', 'Treatment Rooms', 'Digital Technology', 'Relaxing Space', 'Waiting Area', 'Sterilization', 'Interior Design', 'Reception']
+        labels: ['Modern Clinic', 'Treatment Rooms', 'Digital Technology', 'Relaxing Space', 'Waiting Area', 'Sterilization', 'Interior Design', 'Reception'],
+        treatmentRoom: {
+          title: 'Treatment Room',
+          description: 'Modern state-of-the-art equipment'
+        },
+        interior: {
+          title: 'Professional Interior',
+          description: 'Elegant and welcoming design'
+        },
+        equipment: {
+          title: 'Advanced Equipment',
+          description: 'Cutting-edge dental technology'
+        }
       },
       stats: {
         years: 'Years of Excellence',
@@ -717,6 +747,9 @@ export const translations = {
     home: {
       servicesTitle: 'I Nostri Servizi',
       servicesSubtitle: 'Cure dentali complete per tutta la famiglia',
+      equipmentDescription: 'Attrezzature all\'avanguardia in uno spazio progettato per il tuo comfort e sicurezza. Ogni dettaglio della nostra clinica riflette il nostro impegno per l\'eccellenza.',
+      yearsExperience: 'Anni di Esperienza',
+      clientSatisfaction: 'Soddisfazione Clienti',
       trustTitle: 'Perché i Pazienti Ci Scelgono',
       trustItem1: 'Oltre 15 anni di esperienza',
       trustItem2: 'Tecnologia dentale all\'avanguardia',
@@ -941,7 +974,19 @@ export const translations = {
       clinicPhotos: {
         title: 'La Nostra Clinica',
         subtitle: 'Uno spazio moderno e confortevole progettato per il tuo benessere',
-        labels: ['Clinica Moderna', 'Sale Trattamento', 'Tecnologia Digitale', 'Spazio Relax', 'Sala d\'Attesa', 'Sterilizzazione', 'Interior Design', 'Reception']
+        labels: ['Clinica Moderna', 'Sale Trattamento', 'Tecnologia Digitale', 'Spazio Relax', 'Sala d\'Attesa', 'Sterilizzazione', 'Interior Design', 'Reception'],
+        treatmentRoom: {
+          title: 'Sala Trattamento',
+          description: 'Attrezzature moderne all\'avanguardia'
+        },
+        interior: {
+          title: 'Interni Professionali',
+          description: 'Design elegante e accogliente'
+        },
+        equipment: {
+          title: 'Attrezzature Avanzate',
+          description: 'Tecnologia dentale all\'avanguardia'
+        }
       },
       stats: {
         years: 'Anni di Eccellenza',
