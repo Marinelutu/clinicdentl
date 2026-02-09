@@ -3,6 +3,7 @@ import { Menu, X, Smile } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useBooking } from '../context/BookingContext';
+import { ServicesDropdown } from './ServicesDropdown';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,11 @@ export function Header() {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+  const isServicesActive = location.pathname.startsWith('/services');
 
   const navLinks = [
     { path: '/', label: t.nav.home },
-    { path: '/services', label: t.nav.services },
+    { path: '/services', label: t.nav.services, isDropdown: true },
     { path: '/cosmetic', label: t.nav.cosmetic },
     { path: '/new-patients', label: t.nav.newPatients },
     { path: '/about', label: t.nav.about },
@@ -36,18 +38,26 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
-                  ? 'text-primary bg-primary/5'
-                  : 'text-neutral-600 hover:text-primary hover:bg-neutral-50'
-                  }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.isDropdown ? (
+                <ServicesDropdown
+                  key={link.path}
+                  isActive={isServicesActive}
+                  label={link.label}
+                />
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
+                    ? 'text-primary bg-primary/5'
+                    : 'text-neutral-600 hover:text-primary hover:bg-neutral-50'
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -86,19 +96,29 @@ export function Header() {
       {isMenuOpen && (
         <div className="lg:hidden bg-cream border-t border-gold/20">
           <nav className="px-4 py-4 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
-                  ? 'text-primary bg-primary/5'
-                  : 'text-neutral-600 hover:text-primary hover:bg-neutral-50'
-                  }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.isDropdown ? (
+                <ServicesDropdown
+                  key={link.path}
+                  isActive={isServicesActive}
+                  label={link.label}
+                  mobile
+                  onLinkClick={() => setIsMenuOpen(false)}
+                />
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
+                    ? 'text-primary bg-primary/5'
+                    : 'text-neutral-600 hover:text-primary hover:bg-neutral-50'
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <button
               onClick={() => { openBooking(); setIsMenuOpen(false); }}
               className="w-full mt-4 bg-gradient-to-r from-sage to-sage/80 text-white px-6 py-3 rounded-lg font-medium hover:shadow-md transition-all shadow-sm"

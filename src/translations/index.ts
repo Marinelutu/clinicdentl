@@ -362,6 +362,157 @@ export const translations = {
         'Coroane și Punți', 'Tratament de Canal', 'Ortodonție', 'Stomatologie Estetică'
       ]
     },
+    serviceDetail: {
+      notFound: 'Serviciul nu a fost găsit',
+      backToServices: 'Înapoi la Servicii',
+      allServices: '→ Toate Serviciile',
+      viewAll: 'Vezi Toate →',
+      startingFrom: 'Începând de la',
+      whatIncluded: 'Ce Include',
+      whyTreatmentTitle: 'De Ce Acest Tratament?',
+      forWhomTitle: 'Pentru Cine Este?',
+      guaranteesTitle: 'Garanțiile Noastre',
+      whyNotDelayTitle: 'De Ce Să Nu Amâni?',
+      faqTitle: 'Întrebări Frecvente',
+      relatedServices: 'Servicii Similare',
+      learnMore: 'Află Mai Mult',
+      ctaTitle: 'Pregătit Să Începi?',
+      ctaSubtitle: 'Programează o consultație astăzi și fă primul pas către un zâmbet mai sănătos.',
+      services: {
+        exam: {
+          whyTreatment: 'Examenele dentare regulate sunt esențiale pentru a detecta problemele din timp, când tratamentul este mai simplu și mai accesibil. Prevenția este întotdeauna mai bună decât tratamentul.',
+          forWhom: 'Pentru toți pacienții, indiferent de vârstă. Recomandat la fiecare 6 luni pentru menținerea sănătății orale optime.',
+          guarantees: 'Examinare completă cu echipamente de ultimă generație, radiografii digitale cu expunere minimă la radiații și un plan de tratament clar.',
+          whyNotDelay: 'Problemele dentare ignorate pot evolua rapid. O carie mică poate deveni un tratament de canal costisitor. Controalele regulate vă protejează sănătatea și bugetul.',
+          faqs: [
+            { q: 'Cât durează un examen dentar?', a: 'Un examen complet durează aproximativ 30-45 de minute, incluzând radiografii și evaluare completă.' },
+            { q: 'Este dureros examenul?', a: 'Nu, examenul dentar este complet nedureros. Folosim instrumente delicate și tehnologie modernă.' },
+            { q: 'Cât de des ar trebui să fac un control?', a: 'Recomandăm un control la fiecare 6 luni pentru a menține sănătatea orală optimă.' }
+          ]
+        },
+        cleaning: {
+          whyTreatment: 'Curățarea profesională elimină depunerile de tartru și placă bacteriană pe care periajul obișnuit nu le poate îndepărta, prevenind bolile gingivale și cariile.',
+          forWhom: 'Pentru toți pacienții care doresc o igienă orală impecabilă. Esențial pentru fumători și consumatorii de cafea sau ceai.',
+          guarantees: 'Curățare profesională completă cu ultrasunete, lustruire și tratament cu fluor. Rezultate vizibile imediate.',
+          whyNotDelay: 'Tartrul acumulat poate duce la gingivită și parodontită, boli care pot cauza pierderea dinților. Curățarea regulată previne aceste probleme.',
+          faqs: [
+            { q: 'Cât de des ar trebui să fac curățare profesională?', a: 'Recomandăm curățarea profesională la fiecare 6 luni.' },
+            { q: 'Este dureroasă curățarea?', a: 'Curățarea profesională este în general nedureroasă. Puteți simți un ușor disconfort, dar folosim tehnici blânde.' },
+            { q: 'Pot mânca imediat după curățare?', a: 'Da, puteți mânca imediat, dar recomandăm să evitați alimentele și băuturile colorate timp de câteva ore.' }
+          ]
+        },
+        prevention: {
+          whyTreatment: 'Tratamentele preventive creează o barieră de protecție împotriva cariilor și a altor probleme dentare, economisind timp și bani pe termen lung.',
+          forWhom: 'Ideal pentru copii și adulți cu risc crescut de carii. Recomandat și pentru sportivi care au nevoie de gutiere de protecție.',
+          guarantees: 'Sigilări de calitate superioară, tratamente cu fluor profesional și gutiere personalizate pentru protecție maximă.',
+          whyNotDelay: 'Prevenția este sensibil la timp - cu cât acționați mai devreme, cu atât protecția este mai eficientă, mai ales pentru copii ale căror dinți sunt cel mai vulnerabili.',
+          faqs: [
+            { q: 'La ce vârstă ar trebui să înceapă copiii tratamentele preventive?', a: 'Sigilările pot fi aplicate imediat ce apar dinții permanenți, de obicei în jurul vârstei de 6 ani.' },
+            { q: 'Cât durează sigilările?', a: 'Sigilările pot dura până la 10 ani cu îngrijire corespunzătoare.' },
+            { q: 'Sunt sigure tratamentele cu fluor?', a: 'Da, tratamentele cu fluor profesional sunt complet sigure și foarte eficiente în prevenirea cariilor.' }
+          ]
+        },
+        whitening: {
+          whyTreatment: 'Albirea profesională oferă rezultate vizibil superioare față de produsele de acasă, într-un mediu controlat și sigur. Un zâmbet mai alb crește încrederea în sine.',
+          forWhom: 'Pentru adulții care doresc un zâmbet mai strălucitor. Ideal pentru ocazii speciale sau pentru cei care consumă regulat cafea, ceai sau vin roșu.',
+          guarantees: 'Rezultate vizibile din prima ședință - până la 8 nuanțe mai alb. Folosim tehnologia Zoom! pentru rezultate rapide și durabile.',
+          whyNotDelay: 'Petele și decolorările se acumulează în timp și devin mai greu de eliminat. Albirea timpurie previne acumularea și menține zâmbetul strălucitor.',
+          faqs: [
+            { q: 'Cât durează rezultatele albirii?', a: 'Cu îngrijire corespunzătoare, rezultatele pot dura 1-3 ani. Oferim și kituri de mentenanță pentru acasă.' },
+            { q: 'Albirea deteriorează smalțul?', a: 'Nu, albirea profesională este sigură pentru smalțul dentar când este efectuată sub supraveghere medicală.' },
+            { q: 'Pot albi dinții dacă am sensibilitate?', a: 'Da, avem opțiuni speciale pentru dinți sensibili, cu formule delicate și protocoale adaptate.' }
+          ]
+        },
+        veneers: {
+          whyTreatment: 'Fațetele dentare oferă o transformare estetică completă, corectând culoarea, forma, dimensiunea și alinierea dinților într-o singură procedură.',
+          forWhom: 'Pentru cei care doresc un zâmbet perfect - ideal pentru dinți decolorați, ciobiți, cu spații sau nealiniați.',
+          guarantees: 'Fațete din porțelan de cea mai înaltă calitate, design digital personalizat și potrivire perfectă pentru un aspect complet natural.',
+          whyNotDelay: 'Cu cât așteptați mai mult, cu atât dinții pot suferi mai multe modificări care complică procedura. Începeți acum pentru rezultate optime.',
+          faqs: [
+            { q: 'Cât durează fațetele?', a: 'Fațetele din porțelan durează în medie 10-15 ani cu îngrijire corespunzătoare.' },
+            { q: 'Este procedura reversibilă?', a: 'Fațetele tradiționale necesită o pregătire minimală a dintelui. Discutăm toate opțiunile în detaliu la consultație.' },
+            { q: 'Câte vizite sunt necesare?', a: 'De obicei sunt necesare 2-3 vizite: consultație, preparare și aplicare.' }
+          ]
+        },
+        makeover: {
+          whyTreatment: 'O transformare completă a zâmbetului combină multiple proceduri pentru a crea rezultatul perfect, abordând toate aspectele estetice într-un plan unitar.',
+          forWhom: 'Pentru cei care doresc o schimbare dramatică - ideal dacă aveți multiple probleme estetice care necesită o abordare comprehensivă.',
+          guarantees: 'Planificare digitală completă cu previzualizare 3D, materiale premium și rezultate garantate care depășesc așteptările.',
+          whyNotDelay: 'Fiecare zi fără un zâmbet în care credeți este o zi în minus. Investiția în zâmbetul dumneavoastră aduce beneficii pe viață - profesional și personal.',
+          faqs: [
+            { q: 'Cât durează o transformare completă?', a: 'Depinde de complexitate, dar în general 4-8 săptămâni de la planificare la rezultatul final.' },
+            { q: 'Pot vedea rezultatul înainte de procedură?', a: 'Da! Folosim Design Digital al Zâmbetului pentru a vă arăta o previzualizare realistă a rezultatului.' },
+            { q: 'Care este costul unei transformări complete?', a: 'Costul variază în funcție de procedurile necesare. Oferim consultație gratuită și planuri de plată flexibile.' }
+          ]
+        },
+        implants: {
+          whyTreatment: 'Implanturile dentare sunt soluția de aur pentru dinții lipsă - replică exactă a unui dinte natural, cu durabilitate pe viață și funcționalitate completă.',
+          forWhom: 'Pentru pacienții cu dinți lipsă sau dinți care nu mai pot fi salvați. Ideal pentru cei care doresc o soluție permanentă în loc de proteze mobile.',
+          guarantees: 'Implanturi din titan de calitate premium, planificare digitală 3D pentru precizie maximă și garanție extinsă pe implant.',
+          whyNotDelay: 'Pierderea unui dinte duce la resorbția osului în timp, făcând implantul viitor mai complex și costisitor. Acționarea rapidă asigură cele mai bune rezultate.',
+          faqs: [
+            { q: 'Cât durează un implant dentar?', a: 'Cu îngrijire corespunzătoare, implanturile pot dura o viață întreagă. Sunt cea mai durabilă soluție de înlocuire a dinților.' },
+            { q: 'Este procedura dureroasă?', a: 'Nu, procedura se efectuează sub anestezie locală. Majoritatea pacienților raportează un disconfort minim post-operator.' },
+            { q: 'Cât durează procesul complet?', a: 'De la plasare la restaurarea finală, procesul durează 3-6 luni, permițând integrarea completă a implantului.' }
+          ]
+        },
+        crowns: {
+          whyTreatment: 'Coroanele și punțile restaurează dinții deteriorați sau lipsă, redând funcționalitatea și estetica zâmbetului cu restaurări naturale și durabile.',
+          forWhom: 'Pentru pacienții cu dinți fracturați, slăbiți după tratament de canal, sau pentru înlocuirea dinților lipsă prin punți dentare.',
+          guarantees: 'Materiale ceramice de cea mai înaltă calitate, potrivire digitală precisă și aspect natural indistinct de dinții proprii.',
+          whyNotDelay: 'Un dinte deteriorat netratat poate duce la fracturi suplimentare, infecții sau pierderea completă a dintelui. Restaurarea timpurie salvează structura dentară.',
+          faqs: [
+            { q: 'Cât durează o coroană dentară?', a: 'Coroanele ceramice de calitate pot dura 10-20 de ani cu îngrijire corespunzătoare.' },
+            { q: 'Se vede diferența față de dinții naturali?', a: 'Nu, coroanele noastre ceramice sunt proiectate pentru a se potrivi perfect cu dinții naturali în culoare și formă.' },
+            { q: 'Câte vizite necesită o coroană?', a: 'De obicei 2 vizite: pregătire și amprentă digitală, apoi cimentare la a doua vizită.' }
+          ]
+        },
+        rootcanal: {
+          whyTreatment: 'Tratamentul de canal salvează dinți care altfel ar trebui extrasi, eliminând infecția și durerea, păstrând structura naturală a dintelui.',
+          forWhom: 'Pentru pacienții cu infecții dentare, abcese, dureri severe sau dinți cu nerv expus prin carii profunde sau traumatisme.',
+          guarantees: 'Tratament modern cu microscoape, instrumente rotative de ultimă generație și materiale biocompatibile pentru vindecare optimă.',
+          whyNotDelay: 'O infecție dentară netratată poate duce la abces, pierderea dintelui și răspândirea infecției. Tratamentul urgent previne complicații serioase.',
+          faqs: [
+            { q: 'Este dureros tratamentul de canal?', a: 'Cu tehnicile moderne și anestezia adecvată, tratamentul de canal nu este mai dureros decât o simplă obturație.' },
+            { q: 'Câte ședințe necesită tratamentul?', a: 'De obicei 1-2 ședințe, în funcție de complexitatea cazului.' },
+            { q: 'Ce se întâmplă după tratamentul de canal?', a: 'Dintele tratat va necesita de obicei o coroană pentru protecție și durabilitate pe termen lung.' }
+          ]
+        },
+        emergency: {
+          whyTreatment: 'Urgențele dentare necesită intervenție imediată pentru a preveni complicații și a gestiona durerea. Fiecare minut contează în situațiile de urgență.',
+          forWhom: 'Pentru oricine experimentează dureri dentare severe, traumatisme, fracturi, dinți dislocați sau infecții dentare acute.',
+          guarantees: 'Disponibilitate 24/7, programări de urgență în aceeași zi, echipament modern pentru diagnostic rapid și tratament imediat al durerii.',
+          whyNotDelay: 'În situațiile de urgență, fiecare oră contează. Un dinte dislocat poate fi salvat doar în primele 30-60 de minute. Nu amânați - sunați imediat!',
+          faqs: [
+            { q: 'Ce constitue o urgență dentară?', a: 'Durere severă, dinți fracturați sau dislocați, sângerare excesivă, umflături faciale sau infecții sunt toate urgențe dentare.' },
+            { q: 'Cât de repede pot primi ajutor?', a: 'Oferim programări de urgență în aceeași zi și avem o linie telefonică de urgență disponibilă 24/7.' },
+            { q: 'Ce fac cu un dinte căzut?', a: 'Păstrați dintele în lapte sau salivă și prezentați-vă la clinică în maxim 30 de minute pentru șanse maxime de reimplantare.' }
+          ]
+        },
+        extraction: {
+          whyTreatment: 'Extracția dentară este uneori necesară pentru a proteja sănătatea orală generală, eliminând dinții care nu mai pot fi salvați sau care cauzează probleme.',
+          forWhom: 'Pentru pacienții cu dinți de minte problematici, dinți grav deteriorați, sau pentru pregătirea tratamentuluiortodonic.',
+          guarantees: 'Tehnici minim-invazive, opțiuni de sedare pentru confort maxim, și ghidare completă pentru recuperare rapidă.',
+          whyNotDelay: 'Un dinte problematic netras poate cauza infecții, poate deteriora dinții vecini și poate duce la complicații mai serioase în timp.',
+          faqs: [
+            { q: 'Cât durează recuperarea?', a: 'Majoritatea pacienților se recuperează complet în 3-5 zile. Vă oferim instrucțiuni detaliate de îngrijire post-extracție.' },
+            { q: 'Este dureroasă extracția?', a: 'Nu, procedura se efectuează sub anestezie completă. Disconfortul post-operator poate fi gestionat ușor cu medicație.' },
+            { q: 'Pot fi înlocuiți dinții extrasi?', a: 'Da, oferim multiple opțiuni de înlocuire inclusiv implanturi, punți sau proteze, în funcție de situație.' }
+          ]
+        },
+        trauma: {
+          whyTreatment: 'Traumatismele dentare necesită tratament specializat rapid pentru a salva structura dentară și a preveni complicații pe termen lung.',
+          forWhom: 'Pentru pacienți de toate vârstele care au suferit leziuni dentare din accidente, sport sau alte cauze.',
+          guarantees: 'Răspuns imediat de urgență, evaluare completă cu imagistică digitală și plan de tratament personalizat pentru vindecare optimă.',
+          whyNotDelay: 'Tratamentul prompt al traumatismelor dentare crește semnificativ șansele de a salva dinții afectați. Nu amânați - fiecare oră contează!',
+          faqs: [
+            { q: 'Ce fac dacă mi s-a spart un dinte?', a: 'Păstrați fragmentele, clătiți gura cu apă călduță și prezentați-vă urgent la clinică.' },
+            { q: 'Se pot salva dinții afectați de traumatisme?', a: 'În multe cazuri da, mai ales cu tratament prompt. Tehnicile moderne permit restaurări excelente.' },
+            { q: 'Copilul meu și-a lovit un dinte de lapte. Este grav?', a: 'Orice traumatism dentar la copii trebuie evaluat profesional pentru a proteja dinții permanenți în dezvoltare.' }
+          ]
+        }
+      }
+    },
   },
   en: {
     nav: {
@@ -726,6 +877,157 @@ export const translations = {
         'Crowns & Bridges', 'Root Canal', 'Orthodontics', 'Cosmetic Dentistry'
       ]
     },
+    serviceDetail: {
+      notFound: 'Service not found',
+      backToServices: 'Back to Services',
+      allServices: '→ All Services',
+      viewAll: 'View All →',
+      startingFrom: 'Starting from',
+      whatIncluded: "What's Included",
+      whyTreatmentTitle: 'Why This Treatment?',
+      forWhomTitle: 'Who Is This For?',
+      guaranteesTitle: 'Our Guarantees',
+      whyNotDelayTitle: 'Why Not Delay?',
+      faqTitle: 'Frequently Asked Questions',
+      relatedServices: 'Related Services',
+      learnMore: 'Learn More',
+      ctaTitle: 'Ready to Get Started?',
+      ctaSubtitle: 'Schedule your consultation today and take the first step toward a healthier smile.',
+      services: {
+        exam: {
+          whyTreatment: 'Regular dental exams are essential for detecting issues early, when treatment is simpler and more affordable. Prevention is always better than cure.',
+          forWhom: 'For all patients, regardless of age. Recommended every 6 months to maintain optimal oral health.',
+          guarantees: 'Comprehensive examination with state-of-the-art equipment, digital X-rays with minimal radiation exposure, and a clear treatment plan.',
+          whyNotDelay: 'Ignored dental problems can escalate rapidly. A small cavity can become an expensive root canal. Regular checkups protect both your health and your budget.',
+          faqs: [
+            { q: 'How long does a dental exam take?', a: 'A comprehensive exam typically takes about 30-45 minutes, including X-rays and full evaluation.' },
+            { q: 'Is the exam painful?', a: 'No, dental exams are completely painless. We use gentle instruments and modern technology.' },
+            { q: 'How often should I have a checkup?', a: 'We recommend a checkup every 6 months to maintain optimal oral health.' }
+          ]
+        },
+        cleaning: {
+          whyTreatment: 'Professional cleaning removes tartar and plaque buildup that regular brushing cannot eliminate, preventing gum disease and cavities.',
+          forWhom: 'For all patients who want impeccable oral hygiene. Essential for smokers and regular coffee or tea drinkers.',
+          guarantees: 'Complete professional cleaning with ultrasound, polishing, and fluoride treatment. Immediately visible results.',
+          whyNotDelay: 'Accumulated tartar can lead to gingivitis and periodontitis, diseases that can cause tooth loss. Regular cleaning prevents these issues.',
+          faqs: [
+            { q: 'How often should I get professional cleaning?', a: 'We recommend professional cleaning every 6 months.' },
+            { q: 'Is the cleaning painful?', a: 'Professional cleaning is generally painless. You may feel slight discomfort, but we use gentle techniques.' },
+            { q: 'Can I eat right after cleaning?', a: 'Yes, you can eat immediately, but we recommend avoiding colored foods and drinks for a few hours.' }
+          ]
+        },
+        prevention: {
+          whyTreatment: 'Preventive treatments create a protective barrier against cavities and other dental problems, saving time and money in the long run.',
+          forWhom: 'Ideal for children and adults at higher risk of cavities. Also recommended for athletes who need protective mouthguards.',
+          guarantees: 'High-quality sealants, professional fluoride treatments, and custom-fitted mouthguards for maximum protection.',
+          whyNotDelay: 'Prevention is time-sensitive - the earlier you act, the more effective the protection, especially for children whose teeth are most vulnerable.',
+          faqs: [
+            { q: 'At what age should children start preventive treatments?', a: 'Sealants can be applied as soon as permanent teeth emerge, usually around age 6.' },
+            { q: 'How long do sealants last?', a: 'Sealants can last up to 10 years with proper care.' },
+            { q: 'Are fluoride treatments safe?', a: 'Yes, professional fluoride treatments are completely safe and highly effective in preventing cavities.' }
+          ]
+        },
+        whitening: {
+          whyTreatment: 'Professional whitening provides visibly superior results compared to at-home products, in a controlled and safe environment. A whiter smile boosts confidence.',
+          forWhom: 'For adults who want a brighter smile. Ideal for special occasions or for those who regularly consume coffee, tea, or red wine.',
+          guarantees: 'Visible results from the first session - up to 8 shades whiter. We use Zoom! technology for fast, long-lasting results.',
+          whyNotDelay: 'Stains and discoloration accumulate over time and become harder to remove. Early whitening prevents buildup and keeps your smile bright.',
+          faqs: [
+            { q: 'How long do whitening results last?', a: 'With proper care, results can last 1-3 years. We also offer maintenance kits for home use.' },
+            { q: 'Does whitening damage enamel?', a: 'No, professional whitening is safe for enamel when performed under dental supervision.' },
+            { q: 'Can I whiten sensitive teeth?', a: 'Yes, we have special options for sensitive teeth, with gentle formulas and adapted protocols.' }
+          ]
+        },
+        veneers: {
+          whyTreatment: 'Dental veneers offer a complete aesthetic transformation, correcting color, shape, size, and alignment in a single procedure.',
+          forWhom: 'For those who want a perfect smile - ideal for discolored, chipped, gapped, or misaligned teeth.',
+          guarantees: 'Highest quality porcelain veneers, custom digital design, and perfect fit for a completely natural appearance.',
+          whyNotDelay: 'The longer you wait, the more changes your teeth may undergo that complicate the procedure. Start now for optimal results.',
+          faqs: [
+            { q: 'How long do veneers last?', a: 'Porcelain veneers last an average of 10-15 years with proper care.' },
+            { q: 'Is the procedure reversible?', a: 'Traditional veneers require minimal tooth preparation. We discuss all options in detail during consultation.' },
+            { q: 'How many visits are needed?', a: 'Typically 2-3 visits are needed: consultation, preparation, and application.' }
+          ]
+        },
+        makeover: {
+          whyTreatment: 'A complete smile makeover combines multiple procedures to create the perfect result, addressing all aesthetic aspects in a unified plan.',
+          forWhom: 'For those who want a dramatic change - ideal if you have multiple aesthetic issues requiring a comprehensive approach.',
+          guarantees: 'Complete digital planning with 3D preview, premium materials, and guaranteed results that exceed expectations.',
+          whyNotDelay: 'Every day without a smile you believe in is a day lost. Investing in your smile brings lifelong benefits - both professional and personal.',
+          faqs: [
+            { q: 'How long does a complete makeover take?', a: 'Depends on complexity, but generally 4-8 weeks from planning to final result.' },
+            { q: 'Can I see the result before the procedure?', a: 'Yes! We use Digital Smile Design to show you a realistic preview of the result.' },
+            { q: 'What is the cost of a complete makeover?', a: 'Cost varies based on procedures needed. We offer free consultation and flexible payment plans.' }
+          ]
+        },
+        implants: {
+          whyTreatment: 'Dental implants are the gold standard for missing teeth - an exact replica of a natural tooth, with lifetime durability and complete functionality.',
+          forWhom: 'For patients with missing teeth or teeth that can no longer be saved. Ideal for those who want a permanent solution instead of removable dentures.',
+          guarantees: 'Premium titanium implants, 3D digital planning for maximum precision, and extended warranty on implants.',
+          whyNotDelay: 'Tooth loss leads to bone resorption over time, making future implants more complex and costly. Quick action ensures the best results.',
+          faqs: [
+            { q: 'How long does a dental implant last?', a: 'With proper care, implants can last a lifetime. They are the most durable tooth replacement solution.' },
+            { q: 'Is the procedure painful?', a: 'No, the procedure is performed under local anesthesia. Most patients report minimal post-operative discomfort.' },
+            { q: 'How long does the complete process take?', a: 'From placement to final restoration, the process takes 3-6 months, allowing for complete implant integration.' }
+          ]
+        },
+        crowns: {
+          whyTreatment: 'Crowns and bridges restore damaged or missing teeth, bringing back both functionality and aesthetics with natural-looking, durable restorations.',
+          forWhom: 'For patients with fractured teeth, teeth weakened after root canal, or for replacing missing teeth with dental bridges.',
+          guarantees: 'Highest quality ceramic materials, precise digital fitting, and natural appearance indistinguishable from your own teeth.',
+          whyNotDelay: 'An untreated damaged tooth can lead to further fractures, infections, or complete tooth loss. Early restoration saves dental structure.',
+          faqs: [
+            { q: 'How long does a dental crown last?', a: 'Quality ceramic crowns can last 10-20 years with proper care.' },
+            { q: 'Can you tell the difference from natural teeth?', a: 'No, our ceramic crowns are designed to perfectly match your natural teeth in color and shape.' },
+            { q: 'How many visits does a crown require?', a: 'Usually 2 visits: preparation and digital impression, then cementation at the second visit.' }
+          ]
+        },
+        rootcanal: {
+          whyTreatment: 'Root canal therapy saves teeth that would otherwise need extraction, eliminating infection and pain while preserving natural tooth structure.',
+          forWhom: 'For patients with dental infections, abscesses, severe pain, or teeth with exposed nerves due to deep cavities or trauma.',
+          guarantees: 'Modern treatment with microscopes, state-of-the-art rotary instruments, and biocompatible materials for optimal healing.',
+          whyNotDelay: 'An untreated dental infection can lead to abscess, tooth loss, and spread of infection. Urgent treatment prevents serious complications.',
+          faqs: [
+            { q: 'Is root canal treatment painful?', a: 'With modern techniques and proper anesthesia, root canal treatment is no more painful than a simple filling.' },
+            { q: 'How many sessions does treatment require?', a: 'Usually 1-2 sessions, depending on case complexity.' },
+            { q: 'What happens after root canal treatment?', a: 'The treated tooth will usually need a crown for protection and long-term durability.' }
+          ]
+        },
+        emergency: {
+          whyTreatment: 'Dental emergencies require immediate intervention to prevent complications and manage pain. Every minute counts in emergency situations.',
+          forWhom: 'For anyone experiencing severe dental pain, trauma, fractures, dislocated teeth, or acute dental infections.',
+          guarantees: '24/7 availability, same-day emergency appointments, modern equipment for rapid diagnosis, and immediate pain treatment.',
+          whyNotDelay: 'In emergency situations, every hour counts. A dislocated tooth can only be saved within the first 30-60 minutes. Don\'t delay - call immediately!',
+          faqs: [
+            { q: 'What constitutes a dental emergency?', a: 'Severe pain, fractured or dislocated teeth, excessive bleeding, facial swelling, or infections are all dental emergencies.' },
+            { q: 'How quickly can I get help?', a: 'We offer same-day emergency appointments and have a 24/7 emergency phone line available.' },
+            { q: 'What do I do with a knocked-out tooth?', a: 'Keep the tooth in milk or saliva and come to the clinic within 30 minutes for maximum reimplantation chances.' }
+          ]
+        },
+        extraction: {
+          whyTreatment: 'Tooth extraction is sometimes necessary to protect overall oral health, removing teeth that can no longer be saved or are causing problems.',
+          forWhom: 'For patients with problematic wisdom teeth, severely damaged teeth, or for preparation of orthodontic treatment.',
+          guarantees: 'Minimally invasive techniques, sedation options for maximum comfort, and complete recovery guidance.',
+          whyNotDelay: 'A problematic tooth left untreated can cause infections, damage neighboring teeth, and lead to more serious complications over time.',
+          faqs: [
+            { q: 'How long is recovery?', a: 'Most patients fully recover in 3-5 days. We provide detailed post-extraction care instructions.' },
+            { q: 'Is the extraction painful?', a: 'No, the procedure is performed under complete anesthesia. Post-operative discomfort can be easily managed with medication.' },
+            { q: 'Can extracted teeth be replaced?', a: 'Yes, we offer multiple replacement options including implants, bridges, or dentures, depending on the situation.' }
+          ]
+        },
+        trauma: {
+          whyTreatment: 'Dental trauma requires rapid specialized treatment to save dental structure and prevent long-term complications.',
+          forWhom: 'For patients of all ages who have suffered dental injuries from accidents, sports, or other causes.',
+          guarantees: 'Immediate emergency response, complete evaluation with digital imaging, and personalized treatment plan for optimal healing.',
+          whyNotDelay: 'Prompt treatment of dental trauma significantly increases chances of saving affected teeth. Don\'t delay - every hour counts!',
+          faqs: [
+            { q: 'What do I do if I chip a tooth?', a: 'Keep the fragments, rinse your mouth with warm water, and come to the clinic urgently.' },
+            { q: 'Can teeth affected by trauma be saved?', a: 'In many cases yes, especially with prompt treatment. Modern techniques allow excellent restorations.' },
+            { q: 'My child hit a baby tooth. Is it serious?', a: 'Any dental trauma in children should be professionally evaluated to protect developing permanent teeth.' }
+          ]
+        }
+      }
+    },
   },
   it: {
     nav: {
@@ -1089,6 +1391,157 @@ export const translations = {
         'Consulenza Generale', 'Igiene Dentale', 'Sbiancamento Dentale', 'Impianto Dentale',
         'Corone e Ponti', 'Trattamento Canalare', 'Ortodonzia', 'Odontoiatria Estetica'
       ]
+    },
+    serviceDetail: {
+      notFound: 'Servizio non trovato',
+      backToServices: 'Torna ai Servizi',
+      allServices: '→ Tutti i Servizi',
+      viewAll: 'Vedi Tutti →',
+      startingFrom: 'A partire da',
+      whatIncluded: 'Cosa Include',
+      whyTreatmentTitle: 'Perché Questo Trattamento?',
+      forWhomTitle: 'Per Chi È?',
+      guaranteesTitle: 'Le Nostre Garanzie',
+      whyNotDelayTitle: 'Perché Non Rimandare?',
+      faqTitle: 'Domande Frequenti',
+      relatedServices: 'Servizi Correlati',
+      learnMore: 'Scopri di Più',
+      ctaTitle: 'Pronto Per Iniziare?',
+      ctaSubtitle: 'Prenota oggi la tua consulenza e fai il primo passo verso un sorriso più sano.',
+      services: {
+        exam: {
+          whyTreatment: 'Gli esami dentali regolari sono essenziali per rilevare i problemi precocemente, quando il trattamento è più semplice e conveniente.',
+          forWhom: 'Per tutti i pazienti, indipendentemente dall\'età. Raccomandato ogni 6 mesi per mantenere una salute orale ottimale.',
+          guarantees: 'Esame completo con attrezzature all\'avanguardia, raggi X digitali con esposizione minima alle radiazioni e un piano di trattamento chiaro.',
+          whyNotDelay: 'I problemi dentali ignorati possono aggravarsi rapidamente. Una piccola carie può diventare un costoso trattamento canalare.',
+          faqs: [
+            { q: 'Quanto dura un esame dentale?', a: 'Un esame completo dura circa 30-45 minuti, inclusi raggi X e valutazione completa.' },
+            { q: 'L\'esame è doloroso?', a: 'No, gli esami dentali sono completamente indolori.' },
+            { q: 'Quanto spesso dovrei fare un controllo?', a: 'Raccomandiamo un controllo ogni 6 mesi.' }
+          ]
+        },
+        cleaning: {
+          whyTreatment: 'La pulizia professionale rimuove il tartaro e la placca che lo spazzolino non può eliminare, prevenendo malattie gengivali e carie.',
+          forWhom: 'Per tutti i pazienti che desiderano un\'igiene orale impeccabile. Essenziale per fumatori e consumatori regolari di caffè o tè.',
+          guarantees: 'Pulizia professionale completa con ultrasuoni, lucidatura e trattamento al fluoro. Risultati immediatamente visibili.',
+          whyNotDelay: 'Il tartaro accumulato può portare a gengivite e parodontite, malattie che possono causare la perdita dei denti.',
+          faqs: [
+            { q: 'Quanto spesso dovrei fare la pulizia professionale?', a: 'Raccomandiamo la pulizia professionale ogni 6 mesi.' },
+            { q: 'La pulizia è dolorosa?', a: 'La pulizia professionale è generalmente indolore. Utilizziamo tecniche delicate.' },
+            { q: 'Posso mangiare subito dopo la pulizia?', a: 'Sì, ma raccomandiamo di evitare cibi e bevande colorati per alcune ore.' }
+          ]
+        },
+        prevention: {
+          whyTreatment: 'I trattamenti preventivi creano una barriera protettiva contro carie e altri problemi dentali, risparmiando tempo e denaro a lungo termine.',
+          forWhom: 'Ideale per bambini e adulti a rischio elevato di carie. Raccomandato anche per sportivi che necessitano di paradenti protettivi.',
+          guarantees: 'Sigillanti di alta qualità, trattamenti al fluoro professionali e paradenti personalizzati per la massima protezione.',
+          whyNotDelay: 'La prevenzione è sensibile al tempo - prima agisci, più efficace è la protezione, specialmente per i bambini.',
+          faqs: [
+            { q: 'A che età i bambini dovrebbero iniziare i trattamenti preventivi?', a: 'I sigillanti possono essere applicati appena spuntano i denti permanenti, solitamente intorno ai 6 anni.' },
+            { q: 'Quanto durano i sigillanti?', a: 'I sigillanti possono durare fino a 10 anni con cure adeguate.' },
+            { q: 'I trattamenti al fluoro sono sicuri?', a: 'Sì, i trattamenti al fluoro professionali sono completamente sicuri e molto efficaci.' }
+          ]
+        },
+        whitening: {
+          whyTreatment: 'Lo sbiancamento professionale offre risultati visibilmente superiori rispetto ai prodotti domestici, in un ambiente controllato e sicuro.',
+          forWhom: 'Per gli adulti che desiderano un sorriso più luminoso. Ideale per occasioni speciali o consumatori regolari di caffè, tè o vino rosso.',
+          guarantees: 'Risultati visibili dalla prima seduta - fino a 8 tonalità più chiari. Utilizziamo la tecnologia Zoom! per risultati rapidi e duraturi.',
+          whyNotDelay: 'Le macchie e le discromie si accumulano nel tempo e diventano più difficili da rimuovere.',
+          faqs: [
+            { q: 'Quanto durano i risultati dello sbiancamento?', a: 'Con cure adeguate, i risultati possono durare 1-3 anni.' },
+            { q: 'Lo sbiancamento danneggia lo smalto?', a: 'No, lo sbiancamento professionale è sicuro per lo smalto quando sotto supervisione dentale.' },
+            { q: 'Posso sbiancare denti sensibili?', a: 'Sì, abbiamo opzioni speciali per denti sensibili con formule delicate.' }
+          ]
+        },
+        veneers: {
+          whyTreatment: 'Le faccette dentali offrono una trasformazione estetica completa, correggendo colore, forma, dimensione e allineamento.',
+          forWhom: 'Per chi desidera un sorriso perfetto - ideale per denti scoloriti, scheggiati, con spazi o disallineati.',
+          guarantees: 'Faccette in porcellana di altissima qualità, design digitale personalizzato e vestibilità perfetta.',
+          whyNotDelay: 'Più aspetti, più i tuoi denti possono subire modifiche che complicano la procedura. Inizia ora per risultati ottimali.',
+          faqs: [
+            { q: 'Quanto durano le faccette?', a: 'Le faccette in porcellana durano in media 10-15 anni con cure adeguate.' },
+            { q: 'La procedura è reversibile?', a: 'Le faccette tradizionali richiedono una preparazione minima del dente. Discutiamo tutte le opzioni in dettaglio.' },
+            { q: 'Quante visite sono necessarie?', a: 'Di solito 2-3 visite: consultazione, preparazione e applicazione.' }
+          ]
+        },
+        makeover: {
+          whyTreatment: 'Una trasformazione completa del sorriso combina procedure multiple per creare il risultato perfetto.',
+          forWhom: 'Per chi desidera un cambiamento drammatico - ideale se hai problemi estetici multipli che richiedono un approccio comprensivo.',
+          guarantees: 'Pianificazione digitale completa con anteprima 3D, materiali premium e risultati garantiti che superano le aspettative.',
+          whyNotDelay: 'Ogni giorno senza un sorriso in cui credi è un giorno perso. L\'investimento nel tuo sorriso porta benefici per tutta la vita.',
+          faqs: [
+            { q: 'Quanto dura una trasformazione completa?', a: 'Dipende dalla complessità, ma generalmente 4-8 settimane dalla pianificazione al risultato finale.' },
+            { q: 'Posso vedere il risultato prima?', a: 'Sì! Utilizziamo il Digital Smile Design per mostrarti un\'anteprima realistica.' },
+            { q: 'Qual è il costo?', a: 'Il costo varia in base alle procedure necessarie. Offriamo consulenza gratuita e piani di pagamento flessibili.' }
+          ]
+        },
+        implants: {
+          whyTreatment: 'Gli impianti dentali sono lo standard d\'oro per i denti mancanti - replica esatta di un dente naturale, con durabilità a vita.',
+          forWhom: 'Per pazienti con denti mancanti o denti che non possono più essere salvati. Ideale per chi desidera una soluzione permanente.',
+          guarantees: 'Impianti in titanio premium, pianificazione digitale 3D per massima precisione e garanzia estesa sull\'impianto.',
+          whyNotDelay: 'La perdita di un dente porta al riassorbimento osseo nel tempo, rendendo l\'impianto futuro più complesso e costoso.',
+          faqs: [
+            { q: 'Quanto dura un impianto dentale?', a: 'Con cure adeguate, gli impianti possono durare tutta la vita.' },
+            { q: 'La procedura è dolorosa?', a: 'No, la procedura viene eseguita in anestesia locale. La maggior parte dei pazienti riporta un disagio minimo.' },
+            { q: 'Quanto dura il processo completo?', a: 'Dal posizionamento al restauro finale, il processo dura 3-6 mesi.' }
+          ]
+        },
+        crowns: {
+          whyTreatment: 'Corone e ponti restaurano denti danneggiati o mancanti, ripristinando funzionalità ed estetica con restauri naturali e durevoli.',
+          forWhom: 'Per pazienti con denti fratturati, indeboliti dopo trattamento canalare, o per sostituire denti mancanti con ponti.',
+          guarantees: 'Materiali ceramici di altissima qualità, adattamento digitale preciso e aspetto naturale indistinguibile.',
+          whyNotDelay: 'Un dente danneggiato non trattato può portare a ulteriori fratture, infezioni o perdita completa del dente.',
+          faqs: [
+            { q: 'Quanto dura una corona dentale?', a: 'Le corone ceramiche di qualità possono durare 10-20 anni con cure adeguate.' },
+            { q: 'Si vede la differenza?', a: 'No, le nostre corone ceramiche sono progettate per corrispondere perfettamente ai denti naturali.' },
+            { q: 'Quante visite richiede una corona?', a: 'Di solito 2 visite: preparazione e impronta digitale, poi cementazione alla seconda visita.' }
+          ]
+        },
+        rootcanal: {
+          whyTreatment: 'La terapia canalare salva denti che altrimenti dovrebbero essere estratti, eliminando infezione e dolore preservando la struttura naturale.',
+          forWhom: 'Per pazienti con infezioni dentali, ascessi, dolore grave o denti con nervo esposto a causa di carie profonde o traumi.',
+          guarantees: 'Trattamento moderno con microscopi, strumenti rotanti all\'avanguardia e materiali biocompatibili per guarigione ottimale.',
+          whyNotDelay: 'Un\'infezione dentale non trattata può portare ad ascesso, perdita del dente e diffusione dell\'infezione.',
+          faqs: [
+            { q: 'Il trattamento canalare è doloroso?', a: 'Con tecniche moderne e anestesia adeguata, il trattamento canalare non è più doloroso di una semplice otturazione.' },
+            { q: 'Quante sedute richiede?', a: 'Di solito 1-2 sedute, a seconda della complessità del caso.' },
+            { q: 'Cosa succede dopo il trattamento canalare?', a: 'Il dente trattato necessiterà solitamente di una corona per protezione e durabilità a lungo termine.' }
+          ]
+        },
+        emergency: {
+          whyTreatment: 'Le emergenze dentali richiedono intervento immediato per prevenire complicazioni e gestire il dolore. Ogni minuto conta.',
+          forWhom: 'Per chiunque sperimenti dolore dentale grave, traumi, fratture, denti dislocati o infezioni dentali acute.',
+          guarantees: 'Disponibilità 24/7, appuntamenti di emergenza in giornata, attrezzature moderne per diagnosi rapida.',
+          whyNotDelay: 'Nelle situazioni di emergenza, ogni ora conta. Un dente dislocato può essere salvato solo nei primi 30-60 minuti!',
+          faqs: [
+            { q: 'Cosa costituisce un\'emergenza dentale?', a: 'Dolore grave, denti fratturati o dislocati, sanguinamento eccessivo, gonfiore facciale o infezioni.' },
+            { q: 'Quanto velocemente posso ricevere aiuto?', a: 'Offriamo appuntamenti di emergenza in giornata e abbiamo una linea telefonica di emergenza 24/7.' },
+            { q: 'Cosa faccio con un dente caduto?', a: 'Conserva il dente nel latte o nella saliva e vieni in clinica entro 30 minuti.' }
+          ]
+        },
+        extraction: {
+          whyTreatment: 'L\'estrazione dentale è talvolta necessaria per proteggere la salute orale generale, rimuovendo denti che non possono più essere salvati.',
+          forWhom: 'Per pazienti con denti del giudizio problematici, denti gravemente danneggiati o per preparazione al trattamento ortodontico.',
+          guarantees: 'Tecniche minimamente invasive, opzioni di sedazione per massimo comfort e guida completa per il recupero.',
+          whyNotDelay: 'Un dente problematico non estratto può causare infezioni, danneggiare i denti vicini e portare a complicazioni più serie.',
+          faqs: [
+            { q: 'Quanto dura il recupero?', a: 'La maggior parte dei pazienti si riprende completamente in 3-5 giorni.' },
+            { q: 'L\'estrazione è dolorosa?', a: 'No, la procedura viene eseguita in anestesia completa. Il disagio post-operatorio è facilmente gestibile.' },
+            { q: 'I denti estratti possono essere sostituiti?', a: 'Sì, offriamo opzioni multiple tra cui impianti, ponti o protesi.' }
+          ]
+        },
+        trauma: {
+          whyTreatment: 'I traumi dentali richiedono trattamento specializzato rapido per salvare la struttura dentale e prevenire complicazioni a lungo termine.',
+          forWhom: 'Per pazienti di tutte le età che hanno subito lesioni dentali da incidenti, sport o altre cause.',
+          guarantees: 'Risposta di emergenza immediata, valutazione completa con imaging digitale e piano di trattamento personalizzato.',
+          whyNotDelay: 'Il trattamento tempestivo dei traumi dentali aumenta significativamente le possibilità di salvare i denti colpiti!',
+          faqs: [
+            { q: 'Cosa faccio se mi si è rotto un dente?', a: 'Conserva i frammenti, sciacqua la bocca con acqua tiepida e vieni urgentemente in clinica.' },
+            { q: 'I denti colpiti da trauma possono essere salvati?', a: 'In molti casi sì, specialmente con trattamento tempestivo.' },
+            { q: 'Mio figlio ha colpito un dente da latte. È grave?', a: 'Qualsiasi trauma dentale nei bambini deve essere valutato professionalmente per proteggere i denti permanenti in sviluppo.' }
+          ]
+        }
+      }
     },
   },
 };

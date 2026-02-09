@@ -11,6 +11,7 @@ import { NewPatients } from './pages/NewPatients';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Specialists } from './pages/Specialists';
+import { ServicePage } from './pages/ServicePage';
 import BookingModal from './components/BookingModal';
 
 function GlobalBookingModal() {
@@ -30,6 +31,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/:slug" element={<ServicePage />} />
                 <Route path="/cosmetic" element={<Cosmetic />} />
                 <Route path="/new-patients" element={<NewPatients />} />
                 <Route path="/about" element={<About />} />
