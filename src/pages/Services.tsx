@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useQuiz } from '../context/QuizContext';
+import SEO from '../components/SEO';
 
 export function Services() {
   const { t } = useLanguage();
@@ -87,6 +88,11 @@ export function Services() {
   return (
     <PageTransition>
       <div>
+        <SEO
+          title={t.seo.services.title}
+          description={t.seo.services.description}
+          lang={document.documentElement.lang}
+        />
         <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">

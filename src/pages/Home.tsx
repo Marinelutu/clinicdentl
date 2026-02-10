@@ -1,7 +1,7 @@
 import { CTASection } from '../components/CTASection';
 import { Hero } from '../components/Hero';
 import { ServiceCard } from '../components/ServiceCard';
-import { TestimonialCarousel } from '../components/TestimonialCarousel';
+import { TestimonialWall } from '../components/TestimonialWall';
 import { TrustSignals } from '../components/TrustSignals';
 import { StaffCertificates } from '../components/StaffCertificates';
 import { FAQ } from '../components/FAQ';
@@ -10,6 +10,8 @@ import SectionReveal from '../components/ui/SectionReveal';
 import { Sparkles, Shield, Wrench, AlertCircle, HelpCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useQuiz } from '../context/QuizContext';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 export function Home() {
   const { t } = useLanguage();
@@ -56,6 +58,44 @@ export function Home() {
   return (
     <PageTransition>
       <div>
+        <SEO
+          title={t.seo.home.title}
+          description={t.seo.home.description}
+          lang={document.documentElement.lang}
+        />
+        <StructuredData
+          type="MedicalOrganization"
+          data={{
+            name: 'DentaVita',
+            url: window.location.origin,
+            logo: `${window.location.origin}/logo.png`,
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+40-21-123-4567',
+              contactType: 'customer service'
+            },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Str. Primăverii 45',
+              addressLocality: 'București',
+              postalCode: '011971',
+              addressCountry: 'RO'
+            }
+          }}
+        />
+        <StructuredData
+          type="FAQPage"
+          data={{
+            mainEntity: homeFaqs.map(faq => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer
+              }
+            }))
+          }}
+        />
         <Hero />
 
         <SectionReveal>
@@ -187,7 +227,7 @@ export function Home() {
                 </p>
               </div>
 
-              <TestimonialCarousel testimonials={testimonials} />
+              <TestimonialWall testimonials={testimonials} />
             </div>
           </section>
         </SectionReveal>

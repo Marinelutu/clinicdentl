@@ -9,6 +9,31 @@ export const translations = {
       contact: 'Contact',
       bookOnline: 'Programare Online',
     },
+    common: {
+      loading: 'Se încarcă...',
+      submitting: 'Se trimite...',
+      success: 'Succes!',
+      error: 'A apărut o eroare',
+      tryAgain: 'Încearcă din nou',
+    },
+    seo: {
+      home: {
+        title: 'DentaVita | Clinica ta de Medicină Dentară Premium din București',
+        description: 'Experimentează îngrijirea dentară de lux la DentaVita. Servicii complete de la estetică dentară la implantologie, realizate de experți cu peste 15 ani de experiență.',
+      },
+      contact: {
+        title: 'Contact - DentaVita | Programări Online și Urgențe Dentare',
+        description: 'Contactează DentaVita pentru programări sau urgențe dentare. Locație centrală în București, telefon și formular de contact online.',
+      },
+      services: {
+        title: 'Servicii Dentare - DentaVita | Îngrijire Completă și Modernă',
+        description: 'Descoperă gama completă de servicii dentare oferite de DentaVita: prevenție, cosmetică, implantologie și chirurgie orală.',
+      },
+      about: {
+        title: 'Echipa Noastră - DentaVita | Medici Specialiști și Experiență',
+        description: 'Cunoaște echipa de medici specialiști de la DentaVita. Peste 20 de ani de experiență în crearea de zâmbete sănătoase și frumoase.',
+      }
+    },
     hero: {
       title: 'Zâmbetul Tău Perfect Începe Aici',
       subtitle: 'Îngrijire dentară premium într-un ambient relaxant și prietenos. Echipa noastră de specialiști transformă îngrijirea dentară într-o experiență plăcută.',
@@ -360,7 +385,8 @@ export const translations = {
         phone: 'Telefonul este obligatoriu',
         phoneInvalid: 'Număr de telefon invalid',
         email: 'Email-ul este obligatoriu',
-        emailInvalid: 'Adresă de email invalidă'
+        emailInvalid: 'Adresă de email invalidă',
+        submitError: 'A apărut o eroare la trimiterea programării. Vă rugăm să încercați din nou.'
       },
       services: [
         'Consultație Generală', 'Igienă Dentară', 'Albire Dentară', 'Implant Dentar',
@@ -641,6 +667,31 @@ export const translations = {
       about: 'About Us',
       contact: 'Contact',
       bookOnline: 'Book Online',
+    },
+    common: {
+      loading: 'Loading...',
+      submitting: 'Submitting...',
+      success: 'Success!',
+      error: 'An error occurred',
+      tryAgain: 'Try again',
+    },
+    seo: {
+      home: {
+        title: 'DentaVita | Your Premium Dental Clinic in Bucharest',
+        description: 'Experience luxury dental care at DentaVita. Complete services from dental aesthetics to implantology, performed by experts with over 15 years of experience.',
+      },
+      contact: {
+        title: 'Contact - DentaVita | Online Booking and Dental Emergencies',
+        description: 'Contact DentaVita for appointments or dental emergencies. Central location in Bucharest, phone and online contact form.',
+      },
+      services: {
+        title: 'Dental Services - DentaVita | Complete and Modern Care',
+        description: 'Discover the full range of dental services offered by DentaVita: prevention, cosmetics, implantology, and oral surgery.',
+      },
+      about: {
+        title: 'Our Team - DentaVita | Specialist Doctors and Experience',
+        description: 'Meet the team of specialist doctors at DentaVita. Over 20 years of experience in creating healthy and beautiful smiles.',
+      }
     },
     hero: {
       title: 'Your Perfect Smile Starts Here',
@@ -992,7 +1043,8 @@ export const translations = {
         phone: 'Phone is required',
         phoneInvalid: 'Invalid phone number',
         email: 'Email is required',
-        emailInvalid: 'Invalid email address'
+        emailInvalid: 'Invalid email address',
+        submitError: 'An error occurred while submitting your booking. Please try again.'
       },
       services: [
         'General Consultation', 'Dental Hygiene', 'Teeth Whitening', 'Dental Implant',
@@ -1273,6 +1325,31 @@ export const translations = {
       about: 'Chi Siamo',
       contact: 'Contatti',
       bookOnline: 'Prenota Online',
+    },
+    common: {
+      loading: 'Caricamento...',
+      submitting: 'Invio in corso...',
+      success: 'Successo!',
+      error: 'Si è verificato un errore',
+      tryAgain: 'Riprova',
+    },
+    seo: {
+      home: {
+        title: 'DentaVita | La Tua Clinica Dentale Premium a Bucarest',
+        description: 'Sperimenta cure dentali di lusso presso DentaVita. Servizi completi dall\'estetica dentale all\'implantologia, eseguiti da esperti con oltre 15 anni di esperienza.',
+      },
+      contact: {
+        title: 'Contatto - DentaVita | Prenotazione Online e Emergenze Dentali',
+        description: 'Contatta DentaVita per appuntamenti o emergenze dentali. Posizione centrale a Bucarest, telefono e modulo di contatto online.',
+      },
+      services: {
+        title: 'Servizi Dentali - DentaVita | Cure Complete e Moderne',
+        description: 'Scopri la gamma completa di servizi dentali offerti da DentaVita: prevenzione, estetica, implantologia e chirurgia orale.',
+      },
+      about: {
+        title: 'Il Nostro Team - DentaVita | Medici Specialisti ed Esperienza',
+        description: 'Incontra il team di medici specialisti di DentaVita. Oltre 20 anni di esperienza nel creare sorrisi sani e belli.',
+      }
     },
     hero: {
       title: 'Il Tuo Sorriso Perfetto Inizia Qui',
@@ -1624,7 +1701,8 @@ export const translations = {
         phone: 'Il telefono è obbligatorio',
         phoneInvalid: 'Numero di telefono non valido',
         email: 'L\'email è obbligatoria',
-        emailInvalid: 'Indirizzo email non valido'
+        emailInvalid: 'Indirizzo email non valido',
+        submitError: 'Si è verificato un errore durante l\'invio della prenotazione. Riprova.'
       },
       services: [
         'Consulenza Generale', 'Igiene Dentale', 'Sbiancamento Dentale', 'Impianto Dentale',

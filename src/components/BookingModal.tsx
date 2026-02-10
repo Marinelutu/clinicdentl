@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { supabase } from '../lib/supabase';
 
 interface BookingModalProps {
     isOpen: boolean;
@@ -37,7 +38,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
     const services = t.booking?.services || [];
 
@@ -72,14 +73,27 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
         }
 
         setIsSubmitting(true);
+        setSubmitStatus('idle');
 
-        // Simulate API call
-        setTimeout(() => {
-            console.log('Booking submitted:', formData);
-            setSubmitSuccess(true);
-            setIsSubmitting(false);
+        try {
+            const { error } = await supabase
+                .from('bookings')
+                .insert([{
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    date: formData.date,
+                    time: formData.time,
+                    service: formData.service,
+                    message: formData.message,
+                    status: 'pending'
+                }]);
 
-            // Reset form after 2 seconds and close modal
+            if (error) throw error;
+
+            setSubmitStatus('success');
+
+            // Reset form after 3 seconds and close modal
             setTimeout(() => {
                 setFormData({
                     name: '',
@@ -90,20 +104,24 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     service: '',
                     message: '',
                 });
-                setSubmitSuccess(false);
+                setSubmitStatus('idle');
                 onClose();
-            }, 2000);
-        }, 1500);
+            }, 3000);
+        } catch (error) {
+            console.error('Booking error:', error);
+            setSubmitStatus('error');
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        setFormData((prev: FormData) => ({ ...prev, [name]: value }));
         // Clear error when user starts typing
         if (errors[name as keyof FormErrors]) {
-            setErrors((prev) => ({ ...prev, [name]: undefined }));
+            setErrors((prev: FormErrors) => ({ ...prev, [name]: undefined }));
         }
     };
 
@@ -134,11 +152,21 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     </button>
                 </div>
 
-                {/* Success Message */}
-                {submitSuccess && (
-                    <div className="mx-8 mt-6 p-4 bg-sage/10 border border-sage/30 rounded-lg">
-                        <p className="text-sage font-medium text-center">
-                            ✓ {t.booking?.success}
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                    <div className="mx-8 mt-6 p-4 bg-sage/10 border border-sage/30 rounded-lg flex items-center gap-3 animate-fade-in">
+                        <CheckCircle className="w-5 h-5 text-sage" />
+                        <p className="text-sage font-medium">
+                            {t.booking?.success}
+                        </p>
+                    </div>
+                )}
+
+                {submitStatus === 'error' && (
+                    <div className="mx-8 mt-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3 animate-fade-in">
+                        <AlertCircle className="w-5 h-5 text-red-500" />
+                        <p className="text-red-600 font-medium">
+                            {t.booking?.errors?.submitError || 'A apărut o eroare. Vă rugăm să încercați din nou.'}
                         </p>
                     </div>
                 )}
@@ -279,10 +307,20 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                         </button>
                         <button
                             type="submit"
-                            disabled={isSubmitting || submitSuccess}
-                            className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-primary-light text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled={isSubmitting || submitStatus === 'success'}
+                            className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-primary-light text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         >
-                            {isSubmitting ? t.booking?.sending : submitSuccess ? t.booking?.sent : t.booking?.submit}
+                            {isSubmitting ? (
+                                <>
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                    {t.booking?.sending}
+                                </>
+                            ) : submitStatus === 'success' ? (
+                                <>
+                                    <CheckCircle className="w-5 h-5" />
+                                    {t.booking?.sent}
+                                </>
+                            ) : t.booking?.submit}
                         </button>
                     </div>
                 </form>

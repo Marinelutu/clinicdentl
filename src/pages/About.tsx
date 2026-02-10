@@ -2,6 +2,7 @@ import { Award, Heart, Users, Zap, User } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useBooking } from '../context/BookingContext';
 import PageTransition from '../components/ui/PageTransition';
+import SEO from '../components/SEO';
 
 export function About() {
   const { t } = useLanguage();
@@ -37,6 +38,11 @@ export function About() {
   return (
     <PageTransition>
       <div>
+        <SEO
+          title={t.seo.about.title}
+          description={t.seo.about.description}
+          lang={document.documentElement.lang}
+        />
         <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
