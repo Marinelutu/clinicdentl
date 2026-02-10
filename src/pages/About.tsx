@@ -1,6 +1,7 @@
 import { Award, Heart, Users, Zap, User } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useBooking } from '../context/BookingContext';
+import PageTransition from '../components/ui/PageTransition';
 
 export function About() {
   const { t } = useLanguage();
@@ -34,181 +35,183 @@ export function About() {
   ];
 
   return (
-    <div>
-      <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
-              {t.about.title}
-            </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              {t.about.subtitle}
-            </p>
+    <PageTransition>
+      <div>
+        <section className="bg-gradient-to-br from-neutral-50 via-white to-secondary-light/10 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
+                {t.about.title}
+              </h1>
+              <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+                {t.about.subtitle}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 mb-20">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
-                {/* Doctor Image */}
-                <div className="relative h-80 bg-gradient-to-br from-primary-light/10 to-secondary-light/20">
-                  <img
-                    src={`/images/specialist-${index + 1}.png`}
-                    alt={doctor.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Doctor Info */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-serif font-bold text-primary mb-1">
-                    {doctor.name}
-                  </h3>
-                  <div className="text-secondary font-semibold mb-1">{doctor.title}</div>
-                  <div className="text-sm text-neutral-600 mb-4">{doctor.specialization}</div>
-
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2 text-sm">
-                      <Award className="w-4 h-4 text-secondary-dark" />
-                      <span className="text-neutral-700">{doctor.education}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm">
-                      <Zap className="w-4 h-4 text-secondary-dark" />
-                      <span className="text-neutral-700">{doctor.experience}</span>
-                    </div>
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 mb-20">
+              {doctors.map((doctor, index) => (
+                <div key={index} className="bg-gradient-to-br from-neutral-50 to-secondary-light/10 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+                  {/* Doctor Image */}
+                  <div className="relative h-80 bg-gradient-to-br from-primary-light/10 to-secondary-light/20">
+                    <img
+                      src={`/images/specialist-${index + 1}.png`}
+                      alt={doctor.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
-                  <p className="text-neutral-600 leading-relaxed">
-                    {doctor.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  {/* Doctor Info */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-serif font-bold text-primary mb-1">
+                      {doctor.name}
+                    </h3>
+                    <div className="text-secondary font-semibold mb-1">{doctor.title}</div>
+                    <div className="text-sm text-neutral-600 mb-4">{doctor.specialization}</div>
 
-      <section className="py-20 bg-gradient-to-br from-neutral-50 to-secondary-light/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
-              {t.about.story}
-            </h2>
-            <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700 leading-relaxed">
-              <p>
-                {t.about.storyText}
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center space-x-2 text-sm">
+                        <Award className="w-4 h-4 text-secondary-dark" />
+                        <span className="text-neutral-700">{doctor.education}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm">
+                        <Zap className="w-4 h-4 text-secondary-dark" />
+                        <span className="text-neutral-700">{doctor.experience}</span>
+                      </div>
+                    </div>
+
+                    <p className="text-neutral-600 leading-relaxed">
+                      {doctor.bio}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-br from-neutral-50 to-secondary-light/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-serif font-bold text-primary mb-4">
+                {t.about.story}
+              </h2>
+              <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700 leading-relaxed">
+                <p>
+                  {t.about.storyText}
+                </p>
+                <p>
+                  {t.about.missionText}
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
+                  <div className="bg-gradient-to-br from-secondary-light/20 to-primary-light/20 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                    <value.icon className="w-7 h-7 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
+                  <p className="text-neutral-600 leading-relaxed">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-serif font-bold text-primary mb-4">
+                {t.about.clinicPhotos?.title}
+              </h2>
+              <p className="text-xl text-neutral-600">
+                {t.about.clinicPhotos?.subtitle}
               </p>
-              <p>
-                {t.about.missionText}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="bg-gradient-to-br from-secondary-light/20 to-primary-light/20 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
-                  <value.icon className="w-7 h-7 text-secondary" />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
-                <p className="text-neutral-600 leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
-              {t.about.clinicPhotos?.title}
-            </h2>
-            <p className="text-xl text-neutral-600">
-              {t.about.clinicPhotos?.subtitle}
-            </p>
-          </div>
-
-          {/* Professional Clinic Images Gallery */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Treatment Room */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
-              <img
-                src="/images/clinic-treatment.png"
-                alt="Modern dental treatment room with advanced equipment"
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.treatmentRoom?.title}</h3>
-                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.treatmentRoom?.description}</p>
-                </div>
-              </div>
             </div>
 
-            {/* Clinic Corridor */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
-              <img
-                src="/images/clinic-corridor.png"
-                alt="Luxury dental clinic hallway"
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.interior?.title}</h3>
-                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.interior?.description}</p>
+            {/* Professional Clinic Images Gallery */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Treatment Room */}
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+                <img
+                  src="/images/clinic-treatment.png"
+                  alt="Modern dental treatment room with advanced equipment"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.treatmentRoom?.title}</h3>
+                    <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.treatmentRoom?.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Dental Equipment */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
-              <img
-                src="/images/clinic-equipment.png"
-                alt="Advanced dental equipment and technology"
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.equipment?.title}</h3>
-                  <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.equipment?.description}</p>
+              {/* Clinic Corridor */}
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+                <img
+                  src="/images/clinic-corridor.png"
+                  alt="Luxury dental clinic hallway"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.interior?.title}</h3>
+                    <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.interior?.description}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dental Equipment */}
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all">
+                <img
+                  src="/images/clinic-equipment.png"
+                  alt="Advanced dental equipment and technology"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-bold mb-1">{t.about.clinicPhotos?.equipment?.title}</h3>
+                    <p className="text-sm text-neutral-200">{t.about.clinicPhotos?.equipment?.description}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 bg-gradient-to-br from-secondary to-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12 text-white text-center mb-12">
-            <div>
-              <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-neutral-100 text-lg">{t.about.stats?.years}</div>
+        <section className="py-20 bg-gradient-to-br from-secondary to-primary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-12 text-white text-center mb-12">
+              <div>
+                <div className="text-5xl font-bold mb-2">15+</div>
+                <div className="text-neutral-100 text-lg">{t.about.stats?.years}</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold mb-2">10,000+</div>
+                <div className="text-neutral-100 text-lg">{t.about.stats?.patients}</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold mb-2">50+</div>
+                <div className="text-neutral-100 text-lg">{t.about.stats?.awards}</div>
+              </div>
             </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">10,000+</div>
-              <div className="text-neutral-100 text-lg">{t.about.stats?.patients}</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-neutral-100 text-lg">{t.about.stats?.awards}</div>
+
+            <div className="text-center">
+              <button
+                onClick={openBooking}
+                className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl"
+              >
+                {t.ctaSection.button}
+              </button>
             </div>
           </div>
-
-          <div className="text-center">
-            <button
-              onClick={openBooking}
-              className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-neutral-50 transition-all shadow-xl hover:shadow-2xl"
-            >
-              {t.ctaSection.button}
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </PageTransition>
   );
 }
