@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { ScrollToTop } from './components/ScrollToTop';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { BookingProvider, useBooking } from './context/BookingContext';
@@ -81,6 +82,7 @@ function App() {
           </Router>
         </QuizProvider>
       </BookingProvider>
+      <Analytics />
     </LanguageProvider>
   );
 }
