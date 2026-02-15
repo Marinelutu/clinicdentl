@@ -202,6 +202,29 @@ export const translations = {
         },
       },
     },
+    beforeAfter: {
+      badge: 'Rezultate Reale',
+      title: 'Transformări Reale',
+      subtitle: 'Vezi rezultatele extraordinare ale pacienților noștri',
+      cases: {
+        whitening: 'Albire Dentară',
+        smile: 'Transformare Zâmbet',
+        implants: 'Implanturi Dentare'
+      },
+      descriptions: {
+        whitening: 'Transformare completă în doar o ședință',
+        smile: 'Fațete ceramice pentru un zâmbet perfect',
+        implants: 'Restaurare completă cu implanturi'
+      },
+      disclaimer: '* Rezultate individuale pot varia. Fotografii demonstrative.'
+    },
+    calendar: {
+      title: 'Sloturi Disponibile',
+      urgency: 'Sloturile se ocupă rapid!',
+      available: 'Disponibil',
+      lastSlot: 'Ultimul slot',
+      booked: 'Ocupat'
+    },
     cosmetic: {
       title: 'Transformări Estetice',
       subtitle: 'Rezultate remarcabile care transformă zâmbete și vieți',
@@ -859,6 +882,29 @@ export const translations = {
           price: 'from €200'
         },
       },
+    },
+    beforeAfter: {
+      badge: 'Real Results',
+      title: 'Real Transformations',
+      subtitle: 'See the extraordinary results of our patients',
+      cases: {
+        whitening: 'Teeth Whitening',
+        smile: 'Smile Makeover',
+        implants: 'Dental Implants'
+      },
+      descriptions: {
+        whitening: 'Complete transformation in just one session',
+        smile: 'Ceramic veneers for a perfect smile',
+        implants: 'Complete restoration with implants'
+      },
+      disclaimer: '* Individual results may vary. Demo photographs.'
+    },
+    calendar: {
+      title: 'Available Slots',
+      urgency: 'Slots fill up quickly!',
+      available: 'Available',
+      lastSlot: 'Last slot',
+      booked: 'Booked'
     },
     cosmetic: {
       title: 'Aesthetic Transformations',
@@ -1518,10 +1564,33 @@ export const translations = {
         },
       },
     },
+    beforeAfter: {
+      badge: 'Risultati Reali',
+      title: 'Trasformazioni Reali',
+      subtitle: 'Guarda i risultati straordinari dei nostri pazienti',
+      cases: {
+        whitening: 'Sbiancamento Dentale',
+        smile: 'Trasformazione del Sorriso',
+        implants: 'Impianti Dentali'
+      },
+      descriptions: {
+        whitening: 'Trasformazione completa in una sola seduta',
+        smile: 'Faccette in ceramica per un sorriso perfetto',
+        implants: 'Restauro completo con impianti'
+      },
+      disclaimer: '* I risultati individuali possono variare. Fotografie dimostrative.'
+    },
+    calendar: {
+      title: 'Slot Disponibili',
+      urgency: 'Gli slot si riempiono velocemente!',
+      available: 'Disponibile',
+      lastSlot: 'Ultimo slot',
+      booked: 'Prenotato'
+    },
     cosmetic: {
       title: 'Trasformazioni Estetiche',
-      subtitle: 'Risultati straordinari che trasformano sorrisi e vite',
-      beforeAfter: 'Prima & Dopo',
+      subtitle: 'Risultati notevoli che trasformano sorrisi e vite',
+      beforeAfter: 'Prima e Dopo',
       disclaimer: 'Foto dimostrative - risultati simulati per presentazione',
       treatments: 'Trattamenti Estetici',
       intro: 'Procedure cosmetiche all\'avanguardia per darti il sorriso dei tuoi sogni.',

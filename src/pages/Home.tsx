@@ -5,6 +5,7 @@ import { TestimonialWall } from '../components/TestimonialWall';
 import { TrustSignals } from '../components/TrustSignals';
 import { StaffCertificates } from '../components/StaffCertificates';
 import { FAQ } from '../components/FAQ';
+import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
 import PageTransition from '../components/ui/PageTransition';
 import SectionReveal from '../components/ui/SectionReveal';
 import { Sparkles, Shield, Wrench, AlertCircle, HelpCircle, ArrowRight } from 'lucide-react';
@@ -193,6 +194,49 @@ export function Home() {
         </SectionReveal>
 
         <SectionReveal>
+          {/* Before/After Results Section */}
+          <section className="py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <div className="inline-block bg-gold/10 text-gold border border-gold/30 px-4 py-2 rounded-md text-sm font-medium mb-4">
+                  <Sparkles className="w-4 h-4 inline mr-2" />
+                  {t.beforeAfter?.badge || 'Rezultate Reale'}
+                </div>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+                  {t.beforeAfter?.title || 'Transformări Reale'}
+                </h2>
+                <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+                  {t.beforeAfter?.subtitle || 'Vezi rezultatele extraordinare ale pacienților noștri'}
+                </p>
+              </div>
+
+              <div className="max-w-5xl mx-auto">
+                <BeforeAfterSlider
+                  beforeImage="/images/teeth-before.png"
+                  afterImage="/images/teeth-after.png"
+                  alt={t.beforeAfter?.cases?.whitening || 'Teeth Whitening Transformation'}
+                  className="shadow-2xl"
+                />
+                <div className="mt-8 text-center">
+                  <h3 className="font-serif font-bold text-2xl text-primary mb-2">
+                    {t.beforeAfter?.cases?.whitening || 'Albire Dentară'}
+                  </h3>
+                  <p className="text-lg text-neutral-600">
+                    {t.beforeAfter?.descriptions?.whitening || 'Transformare completă în doar o ședință'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center mt-12">
+                <p className="text-sm text-neutral-500 italic">
+                  {t.beforeAfter?.disclaimer || '* Rezultate individuale pot varia. Fotografii demonstrative.'}
+                </p>
+              </div>
+            </div>
+          </section>
+        </SectionReveal>
+
+        <SectionReveal>
           {/* Staff & Certificates Section */}
           <StaffCertificates />
         </SectionReveal>
@@ -237,6 +281,8 @@ export function Home() {
             title={t.home.ready?.title || ''}
             subtitle={t.home.ready?.subtitle || ''}
             buttonText={t.home.ready?.button || ''}
+            variant="card"
+            showCalendar={true}
           />
         </SectionReveal>
       </div>

@@ -20,6 +20,7 @@ const ServicePage = lazy(() => import('./pages/ServicePage').then(m => ({ defaul
 import BookingModal from './components/BookingModal';
 import QuizModal from './components/QuizModal';
 import StickyMobileCTA from './components/StickyMobileCTA';
+import { FloatingChatButton } from './components/FloatingChatButton';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function GlobalBookingModal() {
@@ -77,6 +78,7 @@ function App() {
                 <GlobalBookingModal />
                 <QuizModal />
                 <StickyMobileCTA />
+                <FloatingChatButton />
               </div>
             </ErrorBoundary>
           </Router>

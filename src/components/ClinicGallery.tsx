@@ -95,6 +95,7 @@ export function ClinicGallery() {
                 src={image.url}
                 alt={image.caption}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               */}
                         </div>
